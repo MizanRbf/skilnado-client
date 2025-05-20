@@ -74,13 +74,13 @@ const Header = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <Link to="/addTask">Add Task</Link>
+            <NavLink to="/addTask">Add Task</NavLink>
           </li>
           <li>
-            <Link to="/browseTasks">Browse Tasks</Link>
+            <NavLink to="/browseTasks">Browse Tasks</NavLink>
           </li>
           <li>
-            <Link to="/myPostedTasks">My Posted Tasks</Link>
+            <NavLink to="/myPostedTasks">My Posted Tasks</NavLink>
           </li>
         </ul>
       </div>

@@ -19,7 +19,9 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage></HomePage>,
+        loader: () => fetch("http://localhost:3000/featuredTasks"),
+        hydrateFallbackElement: <Loader></Loader>,
+        Component: HomePage,
       },
       {
         path: "/addTask",

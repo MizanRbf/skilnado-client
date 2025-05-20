@@ -2,8 +2,12 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "../Components/Header";
 import Banner from "../Components/Banner";
+import { useLoaderData } from "react-router";
+import FeaturedCard from "../Components/FeaturedCard";
 
 const HomePage = () => {
+  const featuredTasks = useLoaderData();
+
   return (
     <div className="max-w-[1200px] mx-auto">
       <Helmet>
@@ -17,13 +21,19 @@ const HomePage = () => {
       {/* Featured Tasks Section */}
       <div className="mt-20">
         <div className="text-center mb-10">
-          <h1 className="mb-3 text-center text-primary">Available Tasks</h1>
+          <h1 className="mb-3 text-center text-primary">Featured Tasks</h1>
           <p className="text-sm">
             Discover the joy of monthly surprises! Our curated subscription
             boxes deliver handpicked items straight to your door, offering
             convenience, <br className="hidden lg:block" /> excitement, and
             value—loved by our loyal subscribers everywhere.
           </p>
+          {/* Featured Card */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {featuredTasks.map((featuredTask) => (
+              <FeaturedCard featuredTask={featuredTask}></FeaturedCard>
+            ))}
+          </div>
         </div>
       </div>
 
