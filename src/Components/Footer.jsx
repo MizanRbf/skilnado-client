@@ -6,11 +6,12 @@ import { Link, NavLink } from "react-router";
 
 const Footer = () => {
   return (
-    <footer className=" bg-lime-950 text-white p-10 md:mt-20">
+    <footer className=" bg-black text-white p-10 md:mt-20">
       <div className="flex flex-col lg:flex-row *:mb-8 justify-between mb-10 max-w-[1200px] mx-auto md:px-4">
         {/* Title & Description */}
         <nav className="items-start *:space-y-2">
-          <img className="w-50 mb-10" src="/assets/logo2.png" alt="" />
+          <h1 className="text-left mb-4 text-primary">Skilnado</h1>
+          {/* <img className="w-50 mb-10" src="/assets/logo2.png" alt="" /> */}
           {/* Contact Us */}
           <nav className="*:text-left *:text-xs *:md:text-sm">
             <p className="flex items-start gap-2">
@@ -34,17 +35,8 @@ const Footer = () => {
           <Link to="/" className="link link-hover">
             Home
           </Link>
-          <Link to="/testimonials" className="link link-hover">
-            Testimonials
-          </Link>
-          <Link to="/newsLetter" className="link link-hover">
-            NewsLetter
-          </Link>
           <Link to="/myProfile" className="link link-hover">
             My Profile
-          </Link>
-          <Link to="/subscriptionHistory" className="link link-hover">
-            Subscription History
           </Link>
         </nav>
         <nav className="flex flex-col *:text-sm *:space-y-2 text-left">

@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router";
 import RootLayout from "../Layouts/RootLayout";
 import ErrorPage from "../Pages/ErrorPage";
-import Home from "../Pages/Home";
 import AuthLayout from "../Layouts/AuthLayout";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import HomePage from "../Pages/HomePage";
 
 export const router = createBrowserRouter([
   {
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home></Home>,
+        element: <HomePage></HomePage>,
       },
     ],
   },

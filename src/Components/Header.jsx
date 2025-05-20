@@ -53,20 +53,21 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/testimonials">Testimonials</Link>
+              <Link to="/">Add Task</Link>
             </li>
             <li>
-              <Link to="/newsLetter">NewsLetter</Link>
+              <Link to="/">Browse Tasks</Link>
+            </li>
+            <li>
+              <Link to="/">My Posted Tasks</Link>
             </li>
             <li>
               <Link to="/myProfile">My Profile</Link>
             </li>
-            <li>
-              <Link to="/subscriptionHistory">Subscription History</Link>
-            </li>
           </ul>
         </div>
-        <img className="w-30 md:w-50" src="/assets/logo.png" alt="" />
+        {/* <img className="w-30 md:w-50" src="/assets/logo.png" alt="" /> */}
+        <h2 className="text-left mb-4 text-primary">Skilnado</h2>
       </div>
 
       {/* Menubar for Large Device */}
@@ -74,18 +75,6 @@ const Header = () => {
         <ul className="space-x-6 *:hover:text-primary *:hover:underline menu-horizontal px-1">
           <li>
             <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/testimonials">Testimonials</NavLink>
-          </li>
-          <li>
-            <NavLink to="/newsLetter">NewsLetter</NavLink>
-          </li>
-          <li>
-            <NavLink to="/myProfile">My Profile</NavLink>
-          </li>
-          <li>
-            <NavLink to="/subscriptionHistory">Subscription History</NavLink>
           </li>
         </ul>
       </div>

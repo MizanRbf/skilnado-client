@@ -94,7 +94,7 @@ const Register = () => {
       <div className="bg-primary absolute top-[72px] right-0 left-0 bottom-[30%] md:bottom-[40%]"></div>
       <div className="card bg-base-100 w-full max-w-xs md:max-w-sm mt-30 mx-auto shrink-0 shadow-2xl border border-slate-200 mb-20 md:mt-20">
         <Helmet>
-          <title>Subnestic || Register</title>
+          <title>Skilnado || Register</title>
         </Helmet>
         <div className="card-body">
           <div className="flex justify-center">

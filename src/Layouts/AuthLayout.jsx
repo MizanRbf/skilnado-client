@@ -1,13 +1,13 @@
 import React from "react";
 import { Outlet } from "react-router";
-import Navbar from "../Components/Navbar";
+import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 
 const AuthLayout = () => {
   return (
     <div>
       <header className="w-11/12 mx-auto">
-        <Navbar></Navbar>
+        <Header></Header>
       </header>
 
       {/* Outlet */}
