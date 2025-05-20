@@ -8,6 +8,8 @@ import HomePage from "../Pages/HomePage";
 import AddTask from "../Pages/AddTask";
 import BrowseTasks from "../Pages/BrowseTasks";
 import MyPostedTasks from "../Pages/MyPostedTasks";
+import TaskDetails from "../Components/TaskDetails";
+import Loader from "../Components/Loader";
 
 export const router = createBrowserRouter([
   {
@@ -25,7 +27,15 @@ export const router = createBrowserRouter([
       {
         path: "/browseTasks",
         loader: () => fetch("http://localhost:3000/tasks"),
+        hydrateFallbackElement: <Loader></Loader>,
         Component: BrowseTasks,
+      },
+      {
+        path: "/browseTasks/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/tasks/${params.id}`),
+        hydrateFallbackElement: <Loader></Loader>,
+        Component: TaskDetails,
       },
       {
         path: "/myPostedTasks",

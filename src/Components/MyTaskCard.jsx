@@ -1,13 +1,12 @@
+import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router";
 
-const TaskCard = ({ task }) => {
-  const { _id, taskTitle, category, deadLine, budget, email, name } = task;
-
+const MyTaskCard = ({ myTask }) => {
+  const { _id, taskTitle, category, deadLine, budget, email, name } = myTask;
   return (
     <div className="bg-base-300 flex items-center justify-between p-6 rounded-sm">
       <Helmet>
-        <title>Skilnado || Task Details</title>
+        <title>Skilnado || MyTask</title>
       </Helmet>
       <div>
         <h2>Task Title: {taskTitle}</h2>
@@ -29,14 +28,14 @@ const TaskCard = ({ task }) => {
           <span className="font-bold">DeadLine: </span> {deadLine}
         </p>
         {/* Details Button */}
-        <Link to={`/browseTasks/${_id}`}>
+        {/* <Link to={`/browseTasks/${_id}`}>
           <button className="bg-primary p-2 rounded-sm text-white">
             See Details
           </button>
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
 };
 
-export default TaskCard;
+export default MyTaskCard;
