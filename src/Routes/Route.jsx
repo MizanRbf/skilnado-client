@@ -10,6 +10,7 @@ import BrowseTasks from "../Pages/BrowseTasks";
 import MyPostedTasks from "../Pages/MyPostedTasks";
 import TaskDetails from "../Components/TaskDetails";
 import Loader from "../Components/Loader";
+import UpdateMyTask from "../Components/UpdateMyTask";
 
 export const router = createBrowserRouter([
   {
@@ -40,6 +41,13 @@ export const router = createBrowserRouter([
       {
         path: "/myPostedTasks",
         Component: MyPostedTasks,
+      },
+      {
+        path: "/updateMyTask/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/tasks/${params.id}`),
+        hydrateFallbackElement: <Loader></Loader>,
+        Component: UpdateMyTask,
       },
     ],
   },
