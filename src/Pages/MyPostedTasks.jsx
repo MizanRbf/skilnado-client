@@ -33,7 +33,11 @@ const MyPostedTasks = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {myTasks.map((myTask) => (
-            <MyTaskCard myTask={myTask}></MyTaskCard>
+            <MyTaskCard
+              myTasks={myTasks}
+              setMyTasks={setMyTasks}
+              myTask={myTask}
+            ></MyTaskCard>
           ))}
         </div>
       </div>
