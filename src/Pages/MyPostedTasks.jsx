@@ -12,7 +12,7 @@ const MyPostedTasks = () => {
 
   useEffect(() => {
     if (user?.email) {
-      fetch(`http://localhost:3000/tasks?email=${user.email}`)
+      fetch(`https://skilnado-server.vercel.app/tasks?email=${user.email}`)
         .then((res) => res.json())
         .then((data) => setMyTasks(data))
         .catch((error) => console.log(error.message));

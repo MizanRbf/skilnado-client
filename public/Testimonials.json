@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Mohammad Rahim",
+    "photo": "https://randomuser.me/api/portraits/men/1.jpg",
+    "position": "Startup Founder",
+    "comment": "An excellent platform for finding freelance developers quickly and securely."
+  },
+  {
+    "id": 2,
+    "name": "James Miller",
+    "photo": "https://randomuser.me/api/portraits/men/2.jpg",
+    "position": "Digital Marketer",
+    "comment": "I consistently find skilled professionals here. Very reliable service!"
+  },
+  {
+    "id": 3,
+    "name": "Tanvir Hasan",
+    "photo": "https://randomuser.me/api/portraits/men/3.jpg",
+    "position": "UI/UX Designer",
+    "comment": "Great user experience and tons of active freelancers bidding fast."
+  },
+  {
+    "id": 4,
+    "name": "David Anderson",
+    "photo": "https://randomuser.me/api/portraits/men/4.jpg",
+    "position": "Web Agency Owner",
+    "comment": "I always find affordable solutions for quick client tasks here."
+  },
+  {
+    "id": 5,
+    "name": "Rashed Khan",
+    "photo": "https://randomuser.me/api/portraits/men/5.jpg",
+    "position": "Course Creator",
+    "comment": "Very effective for outsourcing course content writing and editing tasks."
+  },
+  {
+    "id": 6,
+    "name": "Omar Siddiqui",
+    "photo": "https://randomuser.me/api/portraits/men/6.jpg",
+    "position": "Project Manager",
+    "comment": "I love how efficiently I can post and assign quick tasks here."
+  },
+  {
+    "id": 7,
+    "name": "Daniel Scott",
+    "photo": "https://randomuser.me/api/portraits/men/7.jpg",
+    "position": "E-commerce Consultant",
+    "comment": "This site helped me redesign my product listings in just one day."
+  },
+  {
+    "id": 8,
+    "name": "Zahid Hossain",
+    "photo": "https://randomuser.me/api/portraits/men/8.jpg",
+    "position": "Entrepreneur",
+    "comment": "One of the most seamless task hiring platforms I've used so far."
+  },
+  {
+    "id": 9,
+    "name": "Matthew White",
+    "photo": "https://randomuser.me/api/portraits/men/9.jpg",
+    "position": "Business Analyst",
+    "comment": "Freelancers are responsive and professional. Highly recommended."
+  },
+  {
+    "id": 10,
+    "name": "Farhan Javed",
+    "photo": "https://randomuser.me/api/portraits/men/10.jpg",
+    "position": "YouTuber",
+    "comment": "Editing, subtitles, thumbnails – everything gets done super fast!"
+  },
+  {
+    "id": 11,
+    "name": "Samuel Brooks",
+    "photo": "https://randomuser.me/api/portraits/men/11.jpg",
+    "position": "Content Strategist",
+    "comment": "A perfect match for my content planning and task outsourcing needs."
+  },
+  {
+    "id": 12,
+    "name": "Bilal Ahmed",
+    "photo": "https://randomuser.me/api/portraits/men/12.jpg",
+    "position": "Startup CTO",
+    "comment": "Found great part-time coders within minutes. Great support too!"
+  },
+  {
+    "id": 13,
+    "name": "Shawn Parker",
+    "photo": "https://randomuser.me/api/portraits/men/13.jpg",
+    "position": "Marketing Executive",
+    "comment": "An easy-to-use platform that delivers quality results every time."
+  },
+  {
+    "id": 14,
+    "name": "Nayeem Alvi",
+    "photo": "https://randomuser.me/api/portraits/men/14.jpg",
+    "position": "Brand Strategist",
+    "comment": "Got my branding tasks completed ahead of time. Loved the process."
+  },
+  {
+    "id": 15,
+    "name": "Christopher Diaz",
+    "photo": "https://randomuser.me/api/portraits/men/15.jpg",
+    "position": "Product Owner",
+    "comment": "Excellent for sourcing quick design or development help."
+  },
+  {
+    "id": 16,
+    "name": "Zubair Hasan",
+    "photo": "https://randomuser.me/api/portraits/men/16.jpg",
+    "position": "Freelance Consultant",
+    "comment": "Smooth platform with great features for both clients and freelancers."
+  },
+  {
+    "id": 17,
+    "name": "Ethan Riley",
+    "photo": "https://randomuser.me/api/portraits/men/17.jpg",
+    "position": "Operations Lead",
+    "comment": "Easy to manage multiple task postings. Dashboard is clean and fast."
+  },
+  {
+    "id": 18,
+    "name": "Anisur Rahman",
+    "photo": "https://randomuser.me/api/portraits/men/18.jpg",
+    "position": "Research Assistant",
+    "comment": "Used it for data entry and transcription. Highly efficient."
+  },
+  {
+    "id": 19,
+    "name": "Jacob Lee",
+    "photo": "https://randomuser.me/api/portraits/men/19.jpg",
+    "position": "Tech Blogger",
+    "comment": "Ideal for outsourcing writing and SEO optimization work."
+  },
+  {
+    "id": 20,
+    "name": "Shahriar Mahmud",
+    "photo": "https://randomuser.me/api/portraits/men/20.jpg",
+    "position": "Virtual Assistant Manager",
+    "comment": "My team uses this platform for repetitive but urgent work."
+  },
+  {
+    "id": 21,
+    "name": "Ryan Peterson",
+    "photo": "https://randomuser.me/api/portraits/men/21.jpg",
+    "position": "Sales Coach",
+    "comment": "Very good platform to get presentations and materials prepared quickly."
+  },
+  {
+    "id": 22,
+    "name": "Adil Farooq",
+    "photo": "https://randomuser.me/api/portraits/men/22.jpg",
+    "position": "Recruitment Specialist",
+    "comment": "The review system helps me choose the right freelancer every time."
+  },
+  {
+    "id": 23,
+    "name": "Michael Allen",
+    "photo": "https://randomuser.me/api/portraits/men/23.jpg",
+    "position": "Online Seller",
+    "comment": "Perfect for quick Photoshop and image editing tasks."
+  },
+  {
+    "id": 24,
+    "name": "Hasibur Rahman",
+    "photo": "https://randomuser.me/api/portraits/men/24.jpg",
+    "position": "NGO Worker",
+    "comment": "This tool has helped us outsource design tasks during campaigns."
+  },
+  {
+    "id": 25,
+    "name": "Adam Khan",
+    "photo": "https://randomuser.me/api/portraits/men/25.jpg",
+    "position": "Campaign Manager",
+    "comment": "Super helpful for running local marketing campaigns efficiently."
+  },
+  {
+    "id": 26,
+    "name": "Jonathan Carter",
+    "photo": "https://randomuser.me/api/portraits/men/26.jpg",
+    "position": "Remote Team Lead",
+    "comment": "We rely on this platform for quick tech help and small fixes."
+  },
+  {
+    "id": 27,
+    "name": "Saiful Islam",
+    "photo": "https://randomuser.me/api/portraits/men/27.jpg",
+    "position": "Web Developer",
+    "comment": "Clean UI and real projects. It’s also great for networking."
+  },
+  {
+    "id": 28,
+    "name": "Nathan Collins",
+    "photo": "https://randomuser.me/api/portraits/men/28.jpg",
+    "position": "Language Instructor",
+    "comment": "Used for transcription and presentation help – works great!"
+  },
+  {
+    "id": 29,
+    "name": "Imran Qureshi",
+    "photo": "https://randomuser.me/api/portraits/men/29.jpg",
+    "position": "NGO Coordinator",
+    "comment": "Great platform for freelance outreach and reporting tasks."
+  },
+  {
+    "id": 30,
+    "name": "Kyle Roberts",
+    "photo": "https://randomuser.me/api/portraits/men/30.jpg",
+    "position": "eLearning Consultant",
+    "comment": "Excellent turnaround time. I use it monthly for various jobs."
+  }
+]

@@ -11,7 +11,7 @@ const AddTask = () => {
     console.log(newTask);
 
     // Create Coffees Collection in DB
-    fetch("http://localhost:3000/tasks", {
+    fetch("https://skilnado-server.vercel.app/tasks", {
       method: "POST",
       headers: {
         "content-type": "application/json",

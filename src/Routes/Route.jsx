@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        loader: () => fetch("http://localhost:3000/featuredTasks"),
+        loader: () => fetch("https://skilnado-server.vercel.app/featuredTasks"),
         hydrateFallbackElement: <Loader></Loader>,
         Component: HomePage,
       },
@@ -29,14 +29,14 @@ export const router = createBrowserRouter([
       },
       {
         path: "/browseTasks",
-        loader: () => fetch("http://localhost:3000/tasks"),
+        loader: () => fetch("https://skilnado-server.vercel.app/tasks"),
         hydrateFallbackElement: <Loader></Loader>,
         Component: BrowseTasks,
       },
       {
         path: "/browseTasks/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/tasks/${params.id}`),
+          fetch(`https://skilnado-server.vercel.app/tasks/${params.id}`),
         hydrateFallbackElement: <Loader></Loader>,
         Component: TaskDetails,
       },
@@ -47,7 +47,7 @@ export const router = createBrowserRouter([
       {
         path: "/updateMyTask/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/tasks/${params.id}`),
+          fetch(`https://skilnado-server.vercel.app/tasks/${params.id}`),
         hydrateFallbackElement: <Loader></Loader>,
         Component: UpdateMyTask,
       },

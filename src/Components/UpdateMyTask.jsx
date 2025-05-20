@@ -17,7 +17,7 @@ const UpdateMyTask = () => {
     console.log(updatedMyTasks);
 
     // Update My Tasks
-    fetch(`http://localhost:3000/tasks/${_id}`, {
+    fetch(`https://skilnado-server.vercel.app/tasks/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
