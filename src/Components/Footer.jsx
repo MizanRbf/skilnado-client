@@ -36,7 +36,13 @@ const Footer = () => {
             Home
           </Link>
           <Link to="/myProfile" className="link link-hover">
-            My Profile
+            Add Task
+          </Link>
+          <Link to="/myProfile" className="link link-hover">
+            Browse Tasks
+          </Link>
+          <Link to="/myProfile" className="link link-hover">
+            My Posted Tasks
           </Link>
         </nav>
         <nav className="flex flex-col *:text-sm *:space-y-2 text-left">

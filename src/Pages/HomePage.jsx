@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "../Components/Header";
+import Banner from "../Components/Banner";
 
 const HomePage = () => {
   return (
@@ -10,7 +11,7 @@ const HomePage = () => {
       </Helmet>
       {/* Slider */}
       <div>
-        <Header></Header>
+        <Banner></Banner>
       </div>
 
       {/* Featured Tasks Section */}

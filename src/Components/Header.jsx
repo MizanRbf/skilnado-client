@@ -26,7 +26,7 @@ const Header = () => {
       )}
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="lg:hidden mr-3">
+          <div tabIndex={0} role="button" className="md:hidden mr-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"
@@ -53,16 +53,13 @@ const Header = () => {
               <Link to="/">Home</Link>
             </li>
             <li>
-              <Link to="/">Add Task</Link>
+              <Link to="/addTask">Add Task</Link>
             </li>
             <li>
-              <Link to="/">Browse Tasks</Link>
+              <Link to="/browseTasks">Browse Tasks</Link>
             </li>
             <li>
-              <Link to="/">My Posted Tasks</Link>
-            </li>
-            <li>
-              <Link to="/myProfile">My Profile</Link>
+              <Link to="/myPostedTasks">My Posted Tasks</Link>
             </li>
           </ul>
         </div>
@@ -71,10 +68,19 @@ const Header = () => {
       </div>
 
       {/* Menubar for Large Device */}
-      <div className="navbar-center hidden lg:flex">
+      <div className="navbar-center hidden md:flex">
         <ul className="space-x-6 *:hover:text-primary *:hover:underline menu-horizontal px-1">
           <li>
             <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <Link to="/addTask">Add Task</Link>
+          </li>
+          <li>
+            <Link to="/browseTasks">Browse Tasks</Link>
+          </li>
+          <li>
+            <Link to="/myPostedTasks">My Posted Tasks</Link>
           </li>
         </ul>
       </div>
