@@ -98,7 +98,7 @@ const UpdateMyTask = () => {
             <label className="label">User Email</label>
             <input
               type="email"
-              defaultValue={email}
+              value={email}
               name="email"
               className="input w-full"
               placeholder="Enter Your Email"
@@ -108,7 +108,7 @@ const UpdateMyTask = () => {
             <label className="label">User Name</label>
             <input
               type="text"
-              defaultValue={name}
+              value={name}
               name="name"
               className="input w-full"
               placeholder="Enter Your Name"

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
+import Swal from "sweetalert2";
 
 const AddTask = () => {
+  const navigate = useNavigate();
   const [tasks, setTasks] = useState([]);
   // Handle Add Coffee
   const handleAddTask = (e) => {
@@ -23,11 +26,18 @@ const AddTask = () => {
         console.log("after adding coffee to db", data);
 
         if (data.insertedId) {
-          // alert('added successfully')
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Task Added Successfully!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
           newTask._id = data.insertedId;
           const newCoffees = [...tasks, newTask];
           setTasks(newCoffees);
           form.reset();
+          navigate("/browseTasks");
         }
       });
   };
