@@ -1,19 +1,29 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
+// import DatePicker from "react-datepicker";
+// import "react-datepicker/dist/react-datepicker.css";
 
 const AddTask = () => {
   const navigate = useNavigate();
   const [tasks, setTasks] = useState([]);
-  // Handle Add Coffee
+  // const [selectedDate, setSelectedDate] = useState(null);
+
+  // Date Picker
+  // const handleDateChange = (date) => {
+  //   setSelectedDate(date);
+  // };
+
+  // Handle Add Tasks
   const handleAddTask = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
     const newTask = Object.fromEntries(formData.entries());
+    // newTask.deadline = selectedDate?.toISOString().split("T")[0];
     console.log(newTask);
 
-    // Create Coffees Collection in DB
+    // Create Task Collection in DB
     fetch("https://skilnado-server.vercel.app/tasks", {
       method: "POST",
       headers: {
@@ -23,7 +33,7 @@ const AddTask = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("after adding coffee to db", data);
+        console.log("after adding tasks to db", data);
 
         if (data.insertedId) {
           Swal.fire({
@@ -34,8 +44,8 @@ const AddTask = () => {
             timer: 1500,
           });
           newTask._id = data.insertedId;
-          const newCoffees = [...tasks, newTask];
-          setTasks(newCoffees);
+          const newTasks = [...tasks, newTask];
+          setTasks(newTasks);
           form.reset();
           navigate("/browseTasks");
         }
@@ -69,22 +79,24 @@ const AddTask = () => {
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
             <label className="label">Category</label>
-            <input
-              type="text"
-              name="category"
-              className="input w-full"
-              placeholder="Enter Task Category"
-            />
+            <select defaultValue="Category" name="category" className="select">
+              <option disabled={true}>Category</option>
+              <option>Web Development</option>
+              <option>Design</option>
+              <option>Writing</option>
+              <option>Marketing</option>
+            </select>
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
             <label className="label">Deadline</label>
-            <input
-              type="text"
-              name="deadLine"
-              className="input w-full"
-              placeholder="Enter Task Deadline"
-            />
+            {/* <DatePicker
+              selected={selectedDate}
+              onChange={handleDateChange}
+              dateFormat="MM/DD/YYYY"
+            /> */}
           </fieldset>
+
+          {/* Budget */}
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
             <label className="label">Budget</label>
             <input

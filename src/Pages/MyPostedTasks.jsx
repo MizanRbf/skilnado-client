@@ -75,34 +75,43 @@ const MyPostedTasks = () => {
             {/* head */}
             <thead>
               <tr>
-                <th></th>
+                <th>No.</th>
                 <th>Name</th>
-                <th>Job</th>
-                <th>Favorite Color</th>
+                <th>Category</th>
+                <th>Budget</th>
+                <th>Actions</th>
               </tr>
             </thead>
             <tbody>
-              {myTasks.map((myTask) => (
+              {myTasks.map((myTask, index) => (
                 <tr>
-                  <th>1</th>
+                  <th>{index + 1}</th>
                   <td>{myTask.name}</td>
-                  <td>Quality Control Specialist</td>
-                  <td>Blue</td>
-                  {/* Update Button */}
-                  <Link to={`/updateMyTask/${myTask._id}`}>
-                    <button className="bg-black p-2 rounded-sm text-white">
-                      <MdEdit />
-                    </button>
-                  </Link>
-                  {/* Delete Button */}
-                  <Link>
-                    <button
-                      onClick={() => handleDelete(myTask._id)}
-                      className="bg-black ml-3 p-2 rounded-sm text-white"
-                    >
-                      <MdDelete />
-                    </button>
-                  </Link>
+                  <td>{myTask.category}</td>
+                  <td>{myTask.budget}</td>
+                  <div className="flex items-center gap-3">
+                    {/* Update Button */}
+                    <Link to={`/updateMyTask/${myTask._id}`}>
+                      <button className="bg-blue-700 p-2 rounded-sm text-white">
+                        <MdEdit />
+                      </button>
+                    </Link>
+                    {/* Delete Button */}
+                    <Link>
+                      <button
+                        onClick={() => handleDelete(myTask._id)}
+                        className="bg-red-500 p-2 rounded-sm text-white"
+                      >
+                        <MdDelete />
+                      </button>
+                    </Link>
+                    {/* Bids Button */}
+                    <Link>
+                      <button className="bg-black py-1 px-3 rounded-sm text-white">
+                        Bids
+                      </button>
+                    </Link>
+                  </div>
                 </tr>
               ))}
             </tbody>
