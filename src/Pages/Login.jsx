@@ -14,7 +14,7 @@ const Login = () => {
   const emailRef = useRef();
 
   // Context
-  const { setUser, loginUser, setLoading, googleLogin, resetPassword } =
+  const { setUser, loginUser, setLoading, googleLogin } =
     useContext(AuthContext);
 
   const [showPassword, setShowPassword] = useState(false);
@@ -68,20 +68,20 @@ const Login = () => {
       });
   };
   // Reset Password
-  const handleForgetPassword = () => {
-    const email = emailRef.current.value;
-    resetPassword(email)
-      .then(
-        Swal.fire({
-          title: "Check your inbox!",
-          text: "Password reset email sent",
-        })
-      )
-      .catch((error) => {
-        console.log(error);
-        // setErrorMessage(error.message);
-      });
-  };
+  // const handleForgetPassword = () => {
+  //   const email = emailRef.current.value;
+  //   resetPassword(email)
+  //     .then(
+  //       Swal.fire({
+  //         title: "Check your inbox!",
+  //         text: "Password reset email sent",
+  //       })
+  //     )
+  //     .catch((error) => {
+  //       console.log(error);
+  //       // setErrorMessage(error.message);
+  //     });
+  // };
 
   return (
     <>
@@ -123,9 +123,12 @@ const Login = () => {
                 {showPassword ? <FaEye size={15} /> : <LuEyeClosed size={15} />}
               </div>
             </div>
-            <Link className="hover:underline" onClick={handleForgetPassword}>
+
+            {/* Forgot Password */}
+            {/* <Link className="hover:underline" onClick={handleForgetPassword}>
               Forgot password?
-            </Link>
+            </Link> */}
+
             <button type="submit" className="btn btn-primary mt-4 text-white">
               Login
             </button>
