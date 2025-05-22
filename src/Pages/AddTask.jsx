@@ -21,7 +21,7 @@ const AddTask = () => {
     const form = e.target;
     const formData = new FormData(form);
     const newTask = Object.fromEntries(formData.entries());
-    // newTask.deadline = selectedDate?.toISOString().split("T")[0];
+
     console.log(newTask);
 
     // Create Task Collection in DB
@@ -48,15 +48,15 @@ const AddTask = () => {
           const newTasks = [...tasks, newTask];
           setTasks(newTasks);
           form.reset();
-          navigate("/browseTasks");
+          navigate("/myPostedTasks");
         }
       });
   };
 
   return (
-    <div className="p-28 text-black mb-100">
+    <div className="p-28 text-black">
       <Helmet>
-        <title>Add Task</title>
+        <title>Skilnado || Add Task</title>
       </Helmet>
       {/* Content */}
       <div className="text-center mb-10">
@@ -87,7 +87,7 @@ const AddTask = () => {
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
             <label className="label">Deadline</label>
-            <input type="date" name="deadline" className="input w-full" id="" />
+            <input type="date" name="deadline" className="input w-full" />
           </fieldset>
           {/* Budget */}
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">

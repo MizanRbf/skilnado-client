@@ -5,6 +5,7 @@ import { Link } from "react-router";
 import { MdDelete, MdEdit } from "react-icons/md";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
+import Deadline from "../Components/Deadline";
 
 const MyPostedTasks = () => {
   const { user } = use(AuthContext);
@@ -78,7 +79,7 @@ const MyPostedTasks = () => {
                 <th>No.</th>
                 <th>Name</th>
                 <th>Category</th>
-                <th>Budget</th>
+                <th>Deadline</th>
                 <th>Actions</th>
               </tr>
             </thead>
@@ -88,7 +89,9 @@ const MyPostedTasks = () => {
                   <th>{index + 1}</th>
                   <td>{myTask.name}</td>
                   <td>{myTask.category}</td>
-                  <td>{myTask.budget}</td>
+                  <td>
+                    <Deadline deadline={myTask.deadline}></Deadline>
+                  </td>
                   <div className="flex items-center gap-3">
                     {/* Update Button */}
                     <Link to={`/updateMyTask/${myTask._id}`}>
