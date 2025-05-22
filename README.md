@@ -1,12 +1,42 @@
-# React + Vite
+# 🎁 Skilnado
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A dynamic task marketplace platform that connects clients and freelancers. Users can post skill-based tasks, bid for jobs, manage submissions, and collaborate in a secure and interactive environment.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
 
-## Expanding the ESLint configuration
+- Authentication System:
+User registration, login, logout using Firebase Authentication with context-based auth management.
+- Protected Routes:
+Route guarding using custom PrivateRoute and AuthContext.
+- Testimonials:
+Users can submit reviews, and testimonial sliders are displayed using local data.
+- Structured Routing & Layouts:
+Organized routes with AuthLayout and RootLayout using React Router v7.
+- Responsive UI:
+Built using Tailwind CSS and DaisyUI, fully mobile-friendly and accessible.
+- Fast Development with Vite:
+Modern build tool ensures quick dev experience and optimized builds.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚙️ NPM Packages
+
+This project uses the following major NPM packages:
+- Frontend: React 19, React DOM
+- Routing: React Router v7
+- UI Framework: TailwindCSS 4, DaisyUI
+- Authentication: Firebase v11
+- Icons: React Icons
+- Swiper Carousel: SwiperJS
+- Alerts: SweetAlert2
+- Dynamic title: Helmet
+
+---
+
+## ✨ Live URL
+
+---
+
+Copyright © 2025 - All rights reserved by Skilnado.
