@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
+import { Tooltip } from "react-tooltip";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -89,17 +90,18 @@ const Header = () => {
       <div className="navbar-end gap-3">
         {/* User Info */}
         {user && (
-          <div className="relative group cursor-pointer ring-primary ring-2 ring-offset-2 rounded-full">
-            <img
-              className=" rounded-full min-w-[30px] md:min-w-[35px] h-[30px] md:h-[35px]"
-              src={user.photoURL}
-              alt="User"
-            />
-
-            <div className="absolute bottom-[10px] lg:bottom-[10px] text-primary -left-[60px] -translate-x-1/2 text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-              {user.displayName || "User"}
+          <a className="my-anchor-element">
+            <div className="relative group cursor-pointer ring-primary ring-2 ring-offset-2 rounded-full">
+              <img
+                className=" rounded-full min-w-[30px] md:min-w-[35px] h-[30px] md:h-[35px]"
+                src={user.photoURL}
+                alt="User"
+              />
             </div>
-          </div>
+            <Tooltip anchorSelect=".my-anchor-element" place="left">
+              {user.displayName || "User"}
+            </Tooltip>
+          </a>
         )}
 
         {user ? (
