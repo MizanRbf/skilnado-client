@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
 // import DatePicker from "react-datepicker";
@@ -9,7 +10,7 @@ const AddTask = () => {
   const [tasks, setTasks] = useState([]);
   // const [selectedDate, setSelectedDate] = useState(null);
 
-  // Date Picker
+  // // Date Picker
   // const handleDateChange = (date) => {
   //   setSelectedDate(date);
   // };
@@ -53,16 +54,13 @@ const AddTask = () => {
   };
 
   return (
-    <div className="p-28 text-black">
+    <div className="p-28 text-black mb-100">
+      <Helmet>
+        <title>Add Task</title>
+      </Helmet>
       {/* Content */}
-      <div className="text-center p-16">
-        <h1 className="text-4xl font-bold">Add New Task</h1>
-        <p>
-          It is a long established fact that a reader will be distraceted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using Content here.
-        </p>
+      <div className="text-center mb-10">
+        <h1 className="text-4xl font-bold">Add Task</h1>
       </div>
 
       {/* Form */}
@@ -89,13 +87,8 @@ const AddTask = () => {
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
             <label className="label">Deadline</label>
-            {/* <DatePicker
-              selected={selectedDate}
-              onChange={handleDateChange}
-              dateFormat="MM/DD/YYYY"
-            /> */}
+            <input type="date" name="deadline" className="input w-full" id="" />
           </fieldset>
-
           {/* Budget */}
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
             <label className="label">Budget</label>
