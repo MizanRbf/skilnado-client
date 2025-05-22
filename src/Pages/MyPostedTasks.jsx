@@ -57,7 +57,7 @@ const MyPostedTasks = () => {
   };
 
   return (
-    <div className="max-w-[1200px] mx-auto px-4">
+    <div className="max-w-[1200px] mx-auto px-4 mt-30 md:mt-10">
       <Helmet>
         <title>Skilnado || MyTask</title>
       </Helmet>
@@ -65,7 +65,7 @@ const MyPostedTasks = () => {
         <div className="text-center">
           <h1 className=" text-4xl mb-4">My Posted Tasks</h1>
 
-          <button className="border rounded-sm px-3 mb-4 bg-primary text-white border-secondary">
+          <button className="border rounded-sm px-3 mb-4 bg-primary text-white">
             <Link className="font text-xl" to="/addTask">
               Add Task
             </Link>
@@ -92,29 +92,31 @@ const MyPostedTasks = () => {
                   <td>
                     <Deadline deadline={myTask.deadline}></Deadline>
                   </td>
-                  <div className="flex items-center gap-3">
-                    {/* Update Button */}
-                    <Link to={`/updateMyTask/${myTask._id}`}>
-                      <button className="bg-blue-700 p-2 rounded-sm text-white">
-                        <MdEdit />
-                      </button>
-                    </Link>
-                    {/* Delete Button */}
-                    <Link>
-                      <button
-                        onClick={() => handleDelete(myTask._id)}
-                        className="bg-red-500 p-2 rounded-sm text-white"
-                      >
-                        <MdDelete />
-                      </button>
-                    </Link>
-                    {/* Bids Button */}
-                    <Link>
-                      <button className="bg-black py-1 px-3 rounded-sm text-white">
-                        Bids
-                      </button>
-                    </Link>
-                  </div>
+                  <td>
+                    <div className="flex items-center gap-3">
+                      {/* Update Button */}
+                      <Link to={`/updateMyTask/${myTask._id}`}>
+                        <button className="bg-blue-700 p-2 rounded-sm text-white">
+                          <MdEdit />
+                        </button>
+                      </Link>
+                      {/* Delete Button */}
+                      <Link>
+                        <button
+                          onClick={() => handleDelete(myTask._id)}
+                          className="bg-red-500 p-2 rounded-sm text-white"
+                        >
+                          <MdDelete />
+                        </button>
+                      </Link>
+                      {/* Bids Button */}
+                      <Link>
+                        <button className="bg-black py-1 px-3 rounded-sm text-white">
+                          Bids
+                        </button>
+                      </Link>
+                    </div>
+                  </td>
                 </tr>
               ))}
             </tbody>

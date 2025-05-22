@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import Deadline from "./Deadline";
 
 const TaskCard = ({ task }) => {
-  const { _id, taskTitle, category, deadLine, budget, email, name } = task;
+  const { _id, taskTitle, category, budget, email, name } = task;
 
   return (
     <div className="bg-base-300 flex items-center justify-between p-6 rounded-sm">

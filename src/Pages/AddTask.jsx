@@ -2,18 +2,10 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
-// import DatePicker from "react-datepicker";
-// import "react-datepicker/dist/react-datepicker.css";
 
 const AddTask = () => {
   const navigate = useNavigate();
   const [tasks, setTasks] = useState([]);
-  // const [selectedDate, setSelectedDate] = useState(null);
-
-  // // Date Picker
-  // const handleDateChange = (date) => {
-  //   setSelectedDate(date);
-  // };
 
   // Handle Add Tasks
   const handleAddTask = (e) => {
@@ -21,8 +13,6 @@ const AddTask = () => {
     const form = e.target;
     const formData = new FormData(form);
     const newTask = Object.fromEntries(formData.entries());
-
-    console.log(newTask);
 
     // Create Task Collection in DB
     fetch("https://skilnado-server.vercel.app/tasks", {
@@ -54,7 +44,7 @@ const AddTask = () => {
   };
 
   return (
-    <div className="p-28 text-black">
+    <div className="mt-30 md:mt-20 mb-10 text-black">
       <Helmet>
         <title>Skilnado || Add Task</title>
       </Helmet>

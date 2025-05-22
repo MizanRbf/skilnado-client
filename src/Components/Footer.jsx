@@ -67,6 +67,7 @@ const Footer = () => {
 
         {/* Social Icon */}
         <nav className="flex flex-col justify-end gap-6">
+          <h4 className="underline text-left">Visit Us</h4>
           <ul className="flex text-3xl md:text-2xl w-full justify-start space-x-4">
             <li>
               <a
@@ -96,11 +97,13 @@ const Footer = () => {
             <form className="w-full">
               <div className="join">
                 <input
-                  type="text"
-                  placeholder="Email for NewsLetter"
+                  type="email"
+                  placeholder="Email us"
                   className="input input-bordered join-item"
                 />
-                <button className="btn btn-primary join-item">Subscribe</button>
+                <button className="btn btn-primary join-item">
+                  Send Email
+                </button>
               </div>
             </form>
           </div>
@@ -109,7 +112,7 @@ const Footer = () => {
       <div className="text-xs md:text-sm text-center">
         <p>
           Copyright © {new Date().getFullYear()} - All right reserved by
-          Subnestic .com
+          Skilnado
         </p>
       </div>
     </footer>

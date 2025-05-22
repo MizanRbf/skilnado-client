@@ -8,12 +8,12 @@ const BrowseTasks = () => {
   const [tasks, setTasks] = useState(initialTasks);
 
   return (
-    <div className="max-w-[1200px] mx-auto px-4 text-black">
+    <div className="mt-30 md:mt-10 max-w-[1200px] mx-auto px- text-black">
       <div className="my-10">
         <div className="text-center">
           <h1 className=" text-4xl mb-4">All Tasks</h1>
 
-          <button className="border rounded-sm px-3 mb-4 bg-primary text-white border-secondary">
+          <button className="border rounded-sm px-3 mb-4 bg-primary text-white">
             <Link className="font text-xl" to="/addTask">
               Add Task
             </Link>
