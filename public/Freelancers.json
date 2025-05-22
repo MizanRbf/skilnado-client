@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Mizanur Rahman",
+    "title": "Full Stack Developer",
+    "rating": 4.9,
+    "projects": 120,
+    "skills": ["React", "Node.js", "Firebase"],
+    "location": "Bangladesh",
+    "verified": true,
+    "image": "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Tanvir Hossain",
+    "title": "MERN Stack Developer",
+    "rating": 5.0,
+    "projects": 150,
+    "skills": ["MongoDB", "Express", "React", "Node.js"],
+    "location": "USA",
+    "verified": true,
+    "image": "https://randomuser.me/api/portraits/men/45.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Nahid Hasan",
+    "title": "Front-End Developer",
+    "rating": 4.9,
+    "projects": 110,
+    "skills": ["HTML", "CSS", "JavaScript", "React"],
+    "location": "Australia",
+    "verified": true,
+    "image": "https://randomuser.me/api/portraits/men/75.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Raihan Kabir",
+    "title": "Back-End Developer",
+    "rating": 4.8,
+    "projects": 90,
+    "skills": ["Laravel", "MySQL", "API Development"],
+    "location": "Canada",
+    "verified": false,
+    "image": "https://randomuser.me/api/portraits/men/51.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Fahim Chowdhury",
+    "title": "WordPress Developer",
+    "rating": 4.7,
+    "projects": 105,
+    "skills": ["WordPress", "Elementor", "WooCommerce"],
+    "location": "United Kingdom",
+    "verified": true,
+    "image": "https://randomuser.me/api/portraits/men/22.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Shahriar Hossain",
+    "title": "DevOps Engineer",
+    "rating": 4.9,
+    "projects": 140,
+    "skills": ["Docker", "AWS", "CI/CD", "Linux"],
+    "location": "Brasil",
+    "verified": true,
+    "image": "https://randomuser.me/api/portraits/men/66.jpg"
+  }
+]

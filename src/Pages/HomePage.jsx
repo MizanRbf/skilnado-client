@@ -5,6 +5,7 @@ import Banner from "../Components/Banner";
 import { useLoaderData } from "react-router";
 import FeaturedCard from "../Components/FeaturedCard";
 import Testimonials from "../Components/Testimonials";
+import EliteFreelancers from "../Components/EliteFreelancers";
 
 const HomePage = () => {
   const featuredTasks = useLoaderData();
@@ -40,28 +41,17 @@ const HomePage = () => {
 
       {/* Elite Freelancers */}
       <div className="mt-30">
-        <div className="text-center mb-6">
-          <h1 className="mb-3 text-center text-primary">Elite Freelancers</h1>
-          <p className="text-sm">
-            Our customers love what we do! Their feedback reflects the quality,
-            care,
-            <br className="hidden lg:block" /> and commitment we bring to every
-            service. Read their stories and see why they trust us.
-          </p>
+        <div className="mb-6">
+          <h1 className="mb-3 text-primary">Elite Freelancers</h1>
         </div>
+        <EliteFreelancers></EliteFreelancers>
       </div>
 
       {/* Testimonials */}
       <div className="mt-30 mb-20">
-        <div className="text-center mb-6">
-          <h1 className="mb-3 text-center text-primary">Testimonials</h1>
-          <p className="text-sm">
-            Enjoy monthly deliveries filled with handpicked goodies you'll love.
-            From exclusive items to everyday essentials, our subscription boxes
-            <br className="hidden lg:block" />
-            bring excitement, value, and a personalized touch right to your
-            doorstep.
-          </p>
+        <div className=" mb-6">
+          <h1 className="mb-3  text-primary">Testimonials</h1>
+
           <Testimonials></Testimonials>
         </div>
       </div>
