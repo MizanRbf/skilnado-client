@@ -28,6 +28,7 @@ const FeaturedCard = ({ featuredTask }) => {
         </p>
         <div>
           <Deadline deadline={featuredTask?.deadline}></Deadline>
+          {/* {deadline} */}
         </div>
       </div>
     </div>

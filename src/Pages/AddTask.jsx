@@ -111,7 +111,7 @@ const AddTask = () => {
         {/* Description */}
         <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
           <label className="label">Description</label>
-          <input
+          <textarea
             type="text"
             name="description"
             className="input w-full"
@@ -119,7 +119,7 @@ const AddTask = () => {
           />
         </fieldset>
 
-        {/* Photo */}
+        {/* Button */}
         <fieldset className="fieldset  rounded-box w-full p-4 ">
           <input
             type="submit"

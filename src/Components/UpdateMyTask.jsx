@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 const UpdateMyTask = () => {
   const navigate = useNavigate();
   const myTask = useLoaderData();
-  const { _id, taskTitle, category, deadLine, budget, email, name } = myTask;
+  const { _id, taskTitle, deadline, budget, email, name, description } = myTask;
 
   // Handle Update MyTask
   const handleUpdateMyTask = (e) => {
@@ -66,22 +66,21 @@ const UpdateMyTask = () => {
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
             <label className="label">Category</label>
-            <input
-              type="text"
-              defaultValue={category}
-              name="category"
-              className="input w-full"
-              placeholder="Enter Task Category"
-            />
+            <select defaultValue="Category" name="category" className="select">
+              <option disabled={true}>Category</option>
+              <option>Web Development</option>
+              <option>Design</option>
+              <option>Writing</option>
+              <option>Marketing</option>
+            </select>
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
             <label className="label">Deadline</label>
             <input
-              type="text"
-              defaultValue={deadLine}
-              name="deadLine"
+              type="date"
+              name="deadline"
+              defaultValue={deadline}
               className="input w-full"
-              placeholder="Enter Task Deadline"
             />
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
@@ -115,6 +114,17 @@ const UpdateMyTask = () => {
             />
           </fieldset>
         </div>
+        {/* Description */}
+        <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
+          <label className="label">Description</label>
+          <textarea
+            type="text"
+            defaultValue={description}
+            name="description"
+            className="input w-full"
+            placeholder="Text Details"
+          />
+        </fieldset>
         {/* Photo */}
         <fieldset className="fieldset  rounded-box w-full p-4 ">
           <input
