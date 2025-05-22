@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
+import { AuthContext } from "../Provider/AuthContext";
 
 const AddTask = () => {
+  const { bidsCount } = useContext(AuthContext);
   const navigate = useNavigate();
   const [tasks, setTasks] = useState([]);
 
@@ -14,13 +16,18 @@ const AddTask = () => {
     const formData = new FormData(form);
     const newTask = Object.fromEntries(formData.entries());
 
+    const taskInfo = {
+      newTask,
+      bidsCount,
+    };
+
     // Create Task Collection in DB
     fetch("https://skilnado-server.vercel.app/tasks", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(newTask),
+      body: JSON.stringify(taskInfo),
     })
       .then((res) => res.json())
       .then((data) => {

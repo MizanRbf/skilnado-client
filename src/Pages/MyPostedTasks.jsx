@@ -8,7 +8,7 @@ import { Helmet } from "react-helmet-async";
 import Deadline from "../Components/Deadline";
 
 const MyPostedTasks = () => {
-  const { user } = use(AuthContext);
+  const { user, bidsCount } = use(AuthContext);
   const [myTasks, setMyTasks] = useState([]);
   console.log(myTasks);
 
@@ -54,6 +54,14 @@ const MyPostedTasks = () => {
         });
       }
     });
+  };
+
+  // Modal
+  const openModal = () => {
+    const modal = document.getElementById("my_modal_2");
+    if (modal) {
+      modal.showModal();
+    }
   };
 
   return (
@@ -111,10 +119,26 @@ const MyPostedTasks = () => {
                       </Link>
                       {/* Bids Button */}
                       <Link>
-                        <button className="bg-black py-1 px-3 rounded-sm text-white">
+                        <button
+                          onClick={openModal}
+                          className="bg-black  rounded-sm text-white btn"
+                        >
                           Bids
                         </button>
                       </Link>
+                      <dialog id="my_modal_2" className="modal">
+                        <div className="modal-box">
+                          <h3 className="font-bold text-lg">
+                            Bids Count: {bidsCount}
+                          </h3>
+
+                          <div className="modal-action">
+                            <form method="dialog">
+                              <button className="btn">Close</button>
+                            </form>
+                          </div>
+                        </div>
+                      </dialog>
                     </div>
                   </td>
                 </tr>

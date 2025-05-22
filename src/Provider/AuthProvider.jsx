@@ -17,6 +17,7 @@ const provider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [bidsCount, setBidsCount] = useState(0);
 
   // Create User
   const createUser = (email, password) => {
@@ -78,6 +79,8 @@ const AuthProvider = ({ children }) => {
     loginUser,
     googleLogin,
     logOut,
+    bidsCount,
+    setBidsCount,
   };
 
   // AuthContext

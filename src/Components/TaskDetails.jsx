@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link, useLoaderData } from "react-router";
+import { AuthContext } from "../Provider/AuthContext";
 
 const TaskDetails = () => {
+  const { bidsCount, setBidsCount } = useContext(AuthContext);
   const task = useLoaderData();
   console.log(task);
   const { _id, taskTitle, category, deadline, budget, email, name } = task;
-  const [bidsCount, setBidsCount] = useState(0);
 
   const handleBidCount = () => {
     setBidsCount(bidsCount + 1);
