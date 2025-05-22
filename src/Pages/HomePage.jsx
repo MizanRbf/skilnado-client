@@ -6,6 +6,7 @@ import { useLoaderData } from "react-router";
 import FeaturedCard from "../Components/FeaturedCard";
 import Testimonials from "../Components/Testimonials";
 import EliteFreelancers from "../Components/EliteFreelancers";
+import DarkMode from "../Components/DarkMode";
 
 const HomePage = () => {
   const featuredTasks = useLoaderData();
@@ -20,16 +21,13 @@ const HomePage = () => {
         <Banner></Banner>
       </div>
 
+      {/* Theme Controller */}
+      <DarkMode></DarkMode>
       {/* Featured Tasks Section */}
       <div className="mt-20">
-        <div className="text-center mb-10">
-          <h1 className="mb-3 text-center text-primary">Featured Tasks</h1>
-          <p className="text-sm">
-            Discover the joy of monthly surprises! Our curated subscription
-            boxes deliver handpicked items straight to your door, offering
-            convenience, <br className="hidden lg:block" /> excitement, and
-            value—loved by our loyal subscribers everywhere.
-          </p>
+        <div className=" mb-10">
+          <h1 className="mb-3  text-primary">Featured Tasks</h1>
+
           {/* Featured Card */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {featuredTasks.map((featuredTask) => (

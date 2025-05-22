@@ -23,7 +23,7 @@ const EliteFreelancers = () => {
             />
           </div>
 
-          <div className="mx-6 space-y-1 mb-3">
+          <div className="mx-6 space-y-1 mb-3 text-black">
             <h2>{freelancer.name}</h2>
             <p>{freelancer.title}</p>
             <div>

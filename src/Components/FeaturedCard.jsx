@@ -6,12 +6,12 @@ const FeaturedCard = ({ featuredTask }) => {
     featuredTask;
 
   return (
-    <div className="bg-base-300 flex items-center justify-between p-6 rounded-sm">
+    <div className="bg-base-300 p-6 rounded-sm text-black">
       <Helmet>
         <title>Skilnado || Featured Task</title>
       </Helmet>
       <div>
-        <h2>Task Title: {taskTitle}</h2>
+        <h2>{taskTitle}</h2>
       </div>
       <div>
         <p>

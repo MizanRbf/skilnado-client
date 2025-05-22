@@ -53,7 +53,7 @@ const AddTask = () => {
   };
 
   return (
-    <div className="p-28">
+    <div className="p-28 text-black">
       {/* Content */}
       <div className="text-center p-16">
         <h1 className="text-4xl font-bold">Add New Task</h1>

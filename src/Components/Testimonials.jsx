@@ -27,7 +27,7 @@ export default function Testimonials() {
   // console.log(testimonials);
 
   return (
-    <div className="w-full py-10">
+    <div className="w-full py-10 text-black">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
