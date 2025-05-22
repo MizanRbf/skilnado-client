@@ -118,6 +118,17 @@ const AddTask = () => {
             />
           </fieldset>
         </div>
+        {/* Description */}
+        <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
+          <label className="label">Description</label>
+          <input
+            type="text"
+            name="description"
+            className="input w-full"
+            placeholder="Text Details"
+          />
+        </fieldset>
+
         {/* Photo */}
         <fieldset className="fieldset  rounded-box w-full p-4 ">
           <input

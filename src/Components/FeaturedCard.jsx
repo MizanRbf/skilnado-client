@@ -1,9 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router";
+import Deadline from "./Deadline";
 
 const FeaturedCard = ({ featuredTask }) => {
-  const { _id, taskTitle, category, deadLine, budget, email, name } =
-    featuredTask;
+  const { _id, taskTitle, category, budget, email, name } = featuredTask;
 
   return (
     <div className="bg-base-300 p-6 rounded-sm text-black">
@@ -26,9 +26,9 @@ const FeaturedCard = ({ featuredTask }) => {
         <p>
           <span className="font-bold">Budget:</span> {budget}
         </p>
-        <p>
-          <span className="font-bold">DeadLine: </span> {deadLine}
-        </p>
+        <div>
+          <Deadline deadline={featuredTask?.deadline}></Deadline>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router";
+import Deadline from "./Deadline";
 
 const TaskCard = ({ task }) => {
   const { _id, taskTitle, category, deadLine, budget, email, name } = task;
@@ -25,12 +26,12 @@ const TaskCard = ({ task }) => {
         <p>
           <span className="font-bold">Budget:</span> {budget}
         </p>
-        <p>
-          <span className="font-bold">DeadLine: </span> {deadLine}
-        </p>
+        <div>
+          <Deadline deadline={task?.deadline}></Deadline>
+        </div>
         {/* Details Button */}
         <Link to={`/browseTasks/${_id}`}>
-          <button className="bg-primary p-2 rounded-sm text-white">
+          <button className="bg-primary p-2 rounded-sm text-white mt-3">
             See Details
           </button>
         </Link>
