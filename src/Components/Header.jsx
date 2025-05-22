@@ -64,8 +64,7 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        {/* <img className="w-30 md:w-50" src="/assets/logo.png" alt="" /> */}
-        <h2 className="text-left mb-4 text-primary">Skilnado</h2>
+        <img className="w-30 md:w-50" src="/assets/logo.png" alt="" />
       </div>
 
       {/* Menubar for Large Device */}

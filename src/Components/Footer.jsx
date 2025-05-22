@@ -10,8 +10,7 @@ const Footer = () => {
       <div className="flex flex-col lg:flex-row *:mb-8 justify-between mb-10 max-w-[1200px] mx-auto md:px-4">
         {/* Title & Description */}
         <nav className="items-start *:space-y-2">
-          <h1 className="text-left mb-4 text-primary">Skilnado</h1>
-          {/* <img className="w-50 mb-10" src="/assets/logo2.png" alt="" /> */}
+          <img className="w-50 mb-10" src="/assets/logo.png" alt="" />
           {/* Contact Us */}
           <nav className="*:text-left *:text-xs *:md:text-sm">
             <p className="flex items-start gap-2">

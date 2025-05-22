@@ -27,7 +27,7 @@ body {
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
-  --color-primary: orange;
+  --color-primary: #65ac00;
   --color-base-300: #f4f4f4;
 }
 *{
