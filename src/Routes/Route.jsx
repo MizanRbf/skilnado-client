@@ -12,6 +12,7 @@ import TaskDetails from "../Components/TaskDetails";
 import Loader from "../Components/Loader";
 import UpdateMyTask from "../Components/UpdateMyTask";
 import BidForm from "../Components/BidForm";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -26,7 +27,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/addTask",
-        Component: AddTask,
+        element: (
+          <PrivateRoute>
+            <AddTask></AddTask>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/browseTasks",
@@ -39,18 +44,30 @@ export const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`https://skilnado-server.vercel.app/tasks/${params.id}`),
         hydrateFallbackElement: <Loader></Loader>,
-        Component: TaskDetails,
+        element: (
+          <PrivateRoute>
+            <TaskDetails></TaskDetails>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/myPostedTasks",
-        Component: MyPostedTasks,
+        element: (
+          <PrivateRoute>
+            <MyPostedTasks></MyPostedTasks>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/updateMyTask/:id",
         loader: ({ params }) =>
           fetch(`https://skilnado-server.vercel.app/tasks/${params.id}`),
         hydrateFallbackElement: <Loader></Loader>,
-        Component: UpdateMyTask,
+        element: (
+          <PrivateRoute>
+            <UpdateMyTask></UpdateMyTask>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/bids/:id",
