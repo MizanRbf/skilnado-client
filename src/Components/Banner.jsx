@@ -27,42 +27,96 @@ export default function Banner() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper *:min-w-fit"
+        className="mySwiper"
       >
+        {/* Slide - 1 */}
         <SwiperSlide>
-          <img
-            className="w-full rounded-xl"
-            src="https://i.ibb.co.com/W4fxbhqv/Packaging-Boxes-WEB-Banner-USA.webp"
-            alt=""
-          />
+          <div
+            className="h-full bg-cover bg-center text-white p-10 flex flex-col justify-center items-center text-center rounded-xl"
+            style={{
+              backgroundImage: "url('https://i.ibb.co/jGm4KvJ/freelance1.jpg')",
+            }}
+          >
+            <div className="bg-black/60 p-5 rounded-xl">
+              <h1 className="text-2xl md:text-4xl font-bold mb-4">
+                Welcome to Skilnado
+              </h1>
+              <p className="text-sm md:text-lg mb-6">
+                Find the perfect freelancer for your needs.
+              </p>
+              <button className="bg-white text-black font-semibold px-5 py-2 rounded-md hover:bg-gray-200">
+                Get Started
+              </button>
+            </div>
+          </div>
         </SwiperSlide>
+
+        {/* Slide - 2 */}
         <SwiperSlide>
-          <img
-            className="w-full rounded-xl"
-            src="https://i.ibb.co.com/Z6PL4JjZ/03-IPu-KZJy-Au-ABRm40-Bo-W3-YU-2.webp"
-            alt=""
-          />
+          <div
+            className="h-full bg-cover bg-center text-white p-10 flex flex-col justify-center items-center text-center rounded-xl"
+            style={{
+              backgroundImage:
+                "url('https://i.ibb.co/Dk9wrcv/post-task-bg.jpg')",
+            }}
+          >
+            <div className="bg-black/60 p-5 rounded-xl">
+              <h1 className="text-2xl md:text-4xl font-bold mb-4">
+                Post Your Task Easily
+              </h1>
+              <p className="text-sm md:text-lg mb-6">
+                Quick and simple way to get work done.
+              </p>
+              <button className="bg-white text-black font-semibold px-5 py-2 rounded-md hover:bg-gray-200">
+                Post Now
+              </button>
+            </div>
+          </div>
         </SwiperSlide>
+
+        {/* Slide - 3 */}
         <SwiperSlide>
-          <img
-            className="w-full rounded-xl"
-            src="https://i.ibb.co.com/cK8FqJ0F/CKSDi4-Gm9-YYDEAE.webp"
-            alt=""
-          />
+          <div
+            className="h-full bg-cover bg-center text-white p-10 flex flex-col justify-center items-center text-center rounded-xl"
+            style={{
+              backgroundImage:
+                "url('https://i.ibb.co/RGK8V52H/1627105299.jpg')",
+            }}
+          >
+            <div className="bg-black/60 p-5 rounded-xl">
+              <h1 className="text-2xl md:text-4xl font-bold mb-4">
+                Build Your Career
+              </h1>
+              <p className="text-sm md:text-lg mb-6">
+                Join our platform and grow your skills with real projects.
+              </p>
+              <button className="bg-white text-black font-semibold px-5 py-2 rounded-md hover:bg-gray-200">
+                Explore Now
+              </button>
+            </div>
+          </div>
         </SwiperSlide>
+
+        {/* Slide - 4 */}
         <SwiperSlide>
-          <img
-            className="w-full rounded-xl"
-            src="https://i.ibb.co.com/gL6B0mGS/Subscription-Box-Gift-Ideas-for-Moms-Birthday.webp"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            className="w-full rounded-xl"
-            src="https://i.ibb.co.com/SD185mNb/Subscription-Boxes-Blog-r1v2.png"
-            alt=""
-          />
+          <div
+            className="h-full bg-cover bg-center text-white p-10 flex flex-col justify-center items-center text-center rounded-xl"
+            style={{
+              backgroundImage: "url('https://i.ibb.co/Y4J6tJr8/download.png')",
+            }}
+          >
+            <div className="bg-black/60 p-5 rounded-xl">
+              <h1 className="text-2xl md:text-4xl font-bold mb-4">
+                Connect with Top Freelancers
+              </h1>
+              <p className="text-sm md:text-lg mb-6">
+                Get your work done fast and professionally.
+              </p>
+              <button className="bg-white text-black font-semibold px-5 py-2 rounded-md hover:bg-gray-200">
+                Hire Now
+              </button>
+            </div>
+          </div>
         </SwiperSlide>
       </Swiper>
     </>
