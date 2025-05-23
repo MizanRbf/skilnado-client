@@ -30,14 +30,15 @@ export default function Banner() {
         className="mySwiper"
       >
         {/* Slide - 1 */}
-        <SwiperSlide>
+        <SwiperSlide className="rounded-xl">
           <div
             className="h-full bg-cover bg-center text-white p-10 flex flex-col justify-center items-center text-center rounded-xl"
             style={{
-              backgroundImage: "url('https://i.ibb.co/jGm4KvJ/freelance1.jpg')",
+              backgroundImage:
+                "url('https://i.ibb.co/LdJSg51r/652fabcb38cda6eaa8181d86-Freelancer-Space-Game-Imgur-NMa-Se-Afuv-transformed.jpg')",
             }}
           >
-            <div className="bg-black/60 p-5 rounded-xl">
+            <div className="bg-black/90 p-5 rounded-xl">
               <h1 className="text-2xl md:text-4xl font-bold mb-4">
                 Welcome to Skilnado
               </h1>
@@ -52,15 +53,15 @@ export default function Banner() {
         </SwiperSlide>
 
         {/* Slide - 2 */}
-        <SwiperSlide>
+        <SwiperSlide className="rounded-xl">
           <div
             className="h-full bg-cover bg-center text-white p-10 flex flex-col justify-center items-center text-center rounded-xl"
             style={{
               backgroundImage:
-                "url('https://i.ibb.co/Dk9wrcv/post-task-bg.jpg')",
+                "url('https://i.ibb.co/TMb8X5nV/lancer-outer-space-wallpaper-preview.jpg')",
             }}
           >
-            <div className="bg-black/60 p-5 rounded-xl">
+            <div className="bg-primary/30 p-5 rounded-xl">
               <h1 className="text-2xl md:text-4xl font-bold mb-4">
                 Post Your Task Easily
               </h1>
@@ -75,12 +76,12 @@ export default function Banner() {
         </SwiperSlide>
 
         {/* Slide - 3 */}
-        <SwiperSlide>
+        <SwiperSlide className="rounded-xl">
           <div
             className="h-full bg-cover bg-center text-white p-10 flex flex-col justify-center items-center text-center rounded-xl"
             style={{
               backgroundImage:
-                "url('https://i.ibb.co/RGK8V52H/1627105299.jpg')",
+                "url('https://i.ibb.co/hxYrp9P0/cover16-1d8caa92.webp')",
             }}
           >
             <div className="bg-black/60 p-5 rounded-xl">
@@ -98,14 +99,14 @@ export default function Banner() {
         </SwiperSlide>
 
         {/* Slide - 4 */}
-        <SwiperSlide>
+        <SwiperSlide className="rounded-xl">
           <div
             className="h-full bg-cover bg-center text-white p-10 flex flex-col justify-center items-center text-center rounded-xl"
             style={{
-              backgroundImage: "url('https://i.ibb.co/Y4J6tJr8/download.png')",
+              backgroundImage: "url('https://i.ibb.co/pr0cK1qL/images.jpg')",
             }}
           >
-            <div className="bg-black/60 p-5 rounded-xl">
+            <div className="bg-black/80 p-5 rounded-xl">
               <h1 className="text-2xl md:text-4xl font-bold mb-4">
                 Connect with Top Freelancers
               </h1>
