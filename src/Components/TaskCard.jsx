@@ -6,14 +6,14 @@ const TaskCard = ({ task }) => {
   const { _id, taskTitle, category, budget, email, name } = task;
 
   return (
-    <div className="bg-base-300 flex items-center justify-between p-6 rounded-sm">
+    <div className="bg-secondary text-white rounded-4xl">
       <Helmet>
         <title>Skilnado || Task Details</title>
       </Helmet>
-      <div>
-        <h2>Task Title: {taskTitle}</h2>
+      <div className="bg-black text-center py-2">
+        <h2>{taskTitle}</h2>
       </div>
-      <div>
+      <div className="p-6">
         <p>
           <span className="font-bold">Name:</span> {name}
         </p>
@@ -29,13 +29,13 @@ const TaskCard = ({ task }) => {
         <div>
           <Deadline deadline={task?.deadline}></Deadline>
         </div>
-        {/* Details Button */}
-        <Link to={`/browseTasks/${_id}`}>
-          <button className="bg-primary p-2 rounded-sm text-white mt-3">
-            See Details
-          </button>
-        </Link>
       </div>
+      {/* Details Button */}
+      <Link to={`/browseTasks/${_id}`}>
+        <button className="bg-primary p-2  text-white mt-3 w-full rounded-bl-4xl rounded-br-4xl font-bold text-xl">
+          See Details
+        </button>
+      </Link>
     </div>
   );
 };

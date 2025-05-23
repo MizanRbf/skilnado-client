@@ -27,7 +27,7 @@ const BrowseTasks = () => {
           ))}
         </div>
         <Link className="font text-xl" to="/addTask">
-          <button className="border rounded-sm px-3 mb-4 bg-primary text-white flex gap-2 items-center mt-6 cursor-pointer">
+          <button className="border rounded-sm px-3 mb-4 bg-secondary text-white flex gap-2 items-center mt-6 cursor-pointer">
             <IoReturnDownBack className="text-4xl font-bold" />
             <span className="font-bold"> Add Task</span>
           </button>
