@@ -1,4 +1,4 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { AuthContext } from "../Provider/AuthContext";
 import { Link } from "react-router";
@@ -8,15 +8,21 @@ import { Helmet } from "react-helmet-async";
 import Deadline from "../Components/Deadline";
 
 const MyPostedTasks = () => {
-  const { user, bidsCount } = use(AuthContext);
+  const { user } = useContext(AuthContext);
+  const [bids, setBids] = useState([]);
   const [myTasks, setMyTasks] = useState([]);
-  console.log(myTasks);
+  const [bidsOfThis, setBidsOfThis] = useState([]);
 
   useEffect(() => {
     if (user?.email) {
       fetch(`https://skilnado-server.vercel.app/tasks?email=${user.email}`)
         .then((res) => res.json())
         .then((data) => setMyTasks(data))
+        .catch((error) => console.log(error.message));
+      // fetch Bids
+      fetch("https://skilnado-server.vercel.app/bids")
+        .then((res) => res.json())
+        .then((data) => setBids(data))
         .catch((error) => console.log(error.message));
     }
   }, [user]);
@@ -57,7 +63,14 @@ const MyPostedTasks = () => {
   };
 
   // Modal
-  const openModal = () => {
+  const handleModal = (taskId) => {
+    if (!bids || bids.length == 0) {
+      Swal.fire("Please wait", "Loading bids...", "info");
+      return;
+    }
+
+    const filteredBids = bids.filter((bid) => bid?.projectId == taskId);
+    setBidsOfThis(filteredBids);
     const modal = document.getElementById("my_modal_2");
     if (modal) {
       modal.showModal();
@@ -69,6 +82,18 @@ const MyPostedTasks = () => {
       <Helmet>
         <title>Skilnado || MyTask</title>
       </Helmet>
+      {/* Modal */}
+      <dialog id="my_modal_2" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">Total Bids: {bidsOfThis.length}</h3>
+
+          <div className="modal-action">
+            <form method="dialog">
+              <button className="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
       <div className="my-10">
         <div className="text-center">
           <h1 className=" text-4xl mb-4">My Posted Tasks</h1>
@@ -120,25 +145,12 @@ const MyPostedTasks = () => {
                       {/* Bids Button */}
                       <Link>
                         <button
-                          onClick={openModal}
+                          onClick={() => handleModal(myTask._id)}
                           className="bg-black  rounded-sm text-white btn"
                         >
                           Bids
                         </button>
                       </Link>
-                      <dialog id="my_modal_2" className="modal">
-                        <div className="modal-box">
-                          <h3 className="font-bold text-lg">
-                            Bids Count: {bidsCount}
-                          </h3>
-
-                          <div className="modal-action">
-                            <form method="dialog">
-                              <button className="btn">Close</button>
-                            </form>
-                          </div>
-                        </div>
-                      </dialog>
                     </div>
                   </td>
                 </tr>

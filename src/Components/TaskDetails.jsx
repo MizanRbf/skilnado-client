@@ -1,19 +1,24 @@
-import React, { useContext, useState } from "react";
+import { useContext, useEffect } from "react";
 import { Link, useLoaderData } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
 
 const TaskDetails = () => {
-  const { bidsCount, setBidsCount } = useContext(AuthContext);
+  const { bids, setBids } = useContext(AuthContext);
   const task = useLoaderData();
-  console.log(task);
   const { _id, taskTitle, category, deadline, budget, email, name } = task;
 
-  const handleBidCount = () => {
-    setBidsCount(bidsCount + 1);
-  };
+  useEffect(() => {
+    fetch("https://skilnado-server.vercel.app/bids")
+      .then((res) => res.json())
+      .then((data) => setBids(data));
+    // setBids([...bids, bidsData]);
+  }, []);
+
   return (
     <div className="max-w-[1200px] mx-auto my-20 px-10">
-      <h2 className="text-center">You bid for {bidsCount} opportunities.</h2>
+      <h1 className="text-center text-primary">
+        You bid for {bids.length} opportunities.
+      </h1>
       <button className="rounded-sm px-3 mb-4 bg-primary text-white border-secondary">
         <Link className="font text-xl" to="/">
           Go Home
@@ -42,12 +47,11 @@ const TaskDetails = () => {
             </p>
           </div>
         </div>
-        <button
-          onClick={handleBidCount}
-          className="w-full bg-primary rounded-br-sm rounded-bl-sm text-white py-2"
-        >
-          Bid Now
-        </button>
+        <Link to={`/bids/${_id}`}>
+          <button className="w-full bg-primary rounded-br-sm rounded-bl-sm text-white py-2">
+            Bid Now
+          </button>
+        </Link>
       </div>
     </div>
   );

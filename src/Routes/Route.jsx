@@ -11,6 +11,7 @@ import MyPostedTasks from "../Pages/MyPostedTasks";
 import TaskDetails from "../Components/TaskDetails";
 import Loader from "../Components/Loader";
 import UpdateMyTask from "../Components/UpdateMyTask";
+import BidForm from "../Components/BidForm";
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
           fetch(`https://skilnado-server.vercel.app/tasks/${params.id}`),
         hydrateFallbackElement: <Loader></Loader>,
         Component: UpdateMyTask,
+      },
+      {
+        path: "/bids/:id",
+        Component: BidForm,
       },
     ],
   },
