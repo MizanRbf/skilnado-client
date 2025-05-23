@@ -6,6 +6,7 @@ import { MdDelete, MdEdit } from "react-icons/md";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
 import Deadline from "../Components/Deadline";
+import { IoReturnDownBack } from "react-icons/io5";
 
 const MyPostedTasks = () => {
   const { user } = useContext(AuthContext);
@@ -96,18 +97,14 @@ const MyPostedTasks = () => {
       </dialog>
       <div className="my-10">
         <div className="text-center">
-          <h1 className=" text-4xl mb-4">My Posted Tasks</h1>
-
-          <button className="border rounded-sm px-3 mb-4 bg-primary text-white">
-            <Link className="font text-xl" to="/addTask">
-              Add Task
-            </Link>
-          </button>
+          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+            My Posted Tasks
+          </h1>
         </div>
         <div className="overflow-x-auto">
-          <table className="table">
+          <table className="table bg-secondary text-white">
             {/* head */}
-            <thead>
+            <thead className="text-white text-lg bg-whiter">
               <tr>
                 <th>No.</th>
                 <th>Name</th>
@@ -118,7 +115,7 @@ const MyPostedTasks = () => {
             </thead>
             <tbody>
               {myTasks.map((myTask, index) => (
-                <tr>
+                <tr className="border-2 border-white">
                   <th>{index + 1}</th>
                   <td>{myTask.name}</td>
                   <td>{myTask.category}</td>
@@ -129,7 +126,7 @@ const MyPostedTasks = () => {
                     <div className="flex items-center gap-3">
                       {/* Update Button */}
                       <Link to={`/updateMyTask/${myTask._id}`}>
-                        <button className="bg-blue-700 p-2 rounded-sm text-white">
+                        <button className="bg-blue-700 p-2 rounded-sm text-white btn border-0">
                           <MdEdit />
                         </button>
                       </Link>
@@ -137,7 +134,7 @@ const MyPostedTasks = () => {
                       <Link>
                         <button
                           onClick={() => handleDelete(myTask._id)}
-                          className="bg-red-500 p-2 rounded-sm text-white"
+                          className="bg-red-500 p-2 rounded-sm text-white btn border-0"
                         >
                           <MdDelete />
                         </button>
@@ -146,7 +143,7 @@ const MyPostedTasks = () => {
                       <Link>
                         <button
                           onClick={() => handleModal(myTask._id)}
-                          className="bg-black  rounded-sm text-white btn"
+                          className="  rounded-sm text-white btn bg-primary"
                         >
                           Bids
                         </button>
@@ -157,6 +154,12 @@ const MyPostedTasks = () => {
               ))}
             </tbody>
           </table>
+          <Link className="font text-xl" to="/addTask">
+            <button className="border rounded-sm px-3 mb-4 bg-primary text-white flex gap-2 items-center mt-6 cursor-pointer">
+              <IoReturnDownBack className="text-4xl font-bold" />
+              <span className="font-bold"> Add Task</span>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

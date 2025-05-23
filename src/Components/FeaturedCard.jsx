@@ -26,7 +26,7 @@ const FeaturedCard = ({ featuredTask }) => {
         <p>
           <span className="font-bold">Budget:</span> {budget}
         </p>
-        <div className="bg-white rounded-2xl text-center font-bold">
+        <div className="bg-white rounded-2xl text-center font-bold text-black">
           <Deadline deadline={featuredTask?.deadline}></Deadline>
         </div>
       </div>

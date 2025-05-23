@@ -18,7 +18,7 @@ const Deadline = ({ deadline }) => {
   }, [deadline]);
 
   return (
-    <div className="text-sm text-gray-700 mt-2">
+    <div className="text-sm mt-2">
       {daysLeft > 0
         ? `⏳ ${daysLeft} days left `
         : daysLeft === 0
