@@ -25,8 +25,10 @@ const HomePage = () => {
       <DarkMode></DarkMode>
       {/* Featured Tasks Section */}
       <div className="mt-20">
-        <div className=" mb-10">
-          <h1 className="mb-3  text-primary">Featured Tasks</h1>
+        <div>
+          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+            Featured Tasks
+          </h1>
 
           {/* Featured Card */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

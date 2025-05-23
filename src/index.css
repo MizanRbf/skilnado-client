@@ -28,6 +28,8 @@ body {
   name: "light";
   default: true;
   --color-primary: #65ac00;
+  --color-secondary:#406600;
+  --color-base-200:#94d200;
   --color-base-300: #f4f4f4;
 }
 *{
