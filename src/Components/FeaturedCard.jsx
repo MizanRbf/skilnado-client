@@ -6,7 +6,7 @@ const FeaturedCard = ({ featuredTask }) => {
   const { _id, taskTitle, category, budget, email, name } = featuredTask;
 
   return (
-    <div className="bg-secondary rounded-tr-sm rounded-tl-sm rounded-bl-4xl rounded-br-4xl text-black border border-primary">
+    <div className="bg-secondary rounded-tr-sm rounded-tl-sm rounded-bl-4xl rounded-br-4xl text-black border border-primary ">
       <Helmet>
         <title>Skilnado || Featured Task</title>
       </Helmet>

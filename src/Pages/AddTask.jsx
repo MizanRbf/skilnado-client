@@ -50,14 +50,16 @@ const AddTask = () => {
       </Helmet>
       {/* Content */}
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold">Add Task</h1>
+        <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+          Add Task
+        </h1>
       </div>
 
       {/* Form */}
-      <form onSubmit={handleAddTask} className="bg-base-300 rounded-lg">
+      <form onSubmit={handleAddTask} className="bg-secondary p-4 rounded-lg">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <fieldset className="fieldset border-base-300 rounded-box w-full border p-4">
-            <label className="label">Task Title</label>
+          <fieldset className="fieldset border-base-300 rounded-box w-full p-4">
+            <label className="label text-white">Task Title</label>
             <input
               type="text"
               name="taskTitle"
@@ -65,8 +67,8 @@ const AddTask = () => {
               placeholder="Enter Task Name"
             />
           </fieldset>
-          <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-            <label className="label">Category</label>
+          <fieldset className="fieldset  border-base-300 rounded-box w-full p-4">
+            <label className="label text-white">Category</label>
             <select defaultValue="Category" name="category" className="select">
               <option disabled={true}>Category</option>
               <option>Web Development</option>
@@ -75,13 +77,13 @@ const AddTask = () => {
               <option>Marketing</option>
             </select>
           </fieldset>
-          <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-            <label className="label">Deadline</label>
+          <fieldset className="fieldset  border-base-300 rounded-box w-full p-4">
+            <label className="label text-white">Deadline</label>
             <input type="date" name="deadline" className="input w-full" />
           </fieldset>
           {/* Budget */}
-          <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-            <label className="label">Budget</label>
+          <fieldset className="fieldset  border-base-300 rounded-box w-full p-4">
+            <label className="label text-white">Budget</label>
             <input
               type="text"
               name="budget"
@@ -89,8 +91,8 @@ const AddTask = () => {
               placeholder="Enter Task Budget"
             />
           </fieldset>
-          <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-            <label className="label">User Email</label>
+          <fieldset className="fieldset  border-base-300 rounded-box w-full p-4">
+            <label className="label text-white">User Email</label>
             <input
               type="email"
               name="email"
@@ -98,8 +100,8 @@ const AddTask = () => {
               placeholder="Enter Your Email"
             />
           </fieldset>
-          <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-            <label className="label">User Name</label>
+          <fieldset className="fieldset  border-base-300 rounded-box w-full p-4">
+            <label className="label text-white">User Name</label>
             <input
               type="text"
               name="name"
@@ -109,8 +111,8 @@ const AddTask = () => {
           </fieldset>
         </div>
         {/* Description */}
-        <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-          <label className="label">Description</label>
+        <fieldset className="fieldset  border-base-300 rounded-box w-full p-4">
+          <label className="label text-white">Description</label>
           <textarea
             type="text"
             name="description"

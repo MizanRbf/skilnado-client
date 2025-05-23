@@ -51,9 +51,11 @@ export default function Testimonials() {
         {testimonials.map((testimonial) => (
           <SwiperSlide
             key={testimonial.id}
-            className="w-[300px] swiper-slide-custom mb-10"
+            className="w-[300px] swiper-slide-custom mb-16"
           >
             <div className="testimonial-box p-6 border border-slate-200 shadow-lg text-center relative mb-30 bg-secondary rounded-br-[50px]">
+              <p className="text-left text-white ml-10">Client</p>
+              <h2 className="text-white mb-3">Testimonial</h2>
               {/* Comment */}
               <div className="bg-white relative p-2 rounded-lg shadow-2xl">
                 {/* Quote Icon */}
