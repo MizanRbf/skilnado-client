@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLoaderData } from "react-router";
 import TaskCard from "../Components/TaskCard";
+import { IoReturnDownBack } from "react-icons/io5";
 
 const BrowseTasks = () => {
   const initialTasks = useLoaderData();
@@ -11,13 +12,9 @@ const BrowseTasks = () => {
     <div className="mt-30 md:mt-10 max-w-[1200px] mx-auto px- text-black">
       <div className="my-10">
         <div className="text-center">
-          <h1 className=" text-4xl mb-4">All Tasks</h1>
-
-          <button className="border rounded-sm px-3 mb-4 bg-primary text-white">
-            <Link className="font text-xl" to="/addTask">
-              Add Task
-            </Link>
-          </button>
+          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+            All Tasks
+          </h1>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {tasks.map((task) => (
@@ -29,6 +26,12 @@ const BrowseTasks = () => {
             ></TaskCard>
           ))}
         </div>
+        <Link className="font text-xl" to="/addTask">
+          <button className="border rounded-sm px-3 mb-4 bg-primary text-white flex gap-2 items-center mt-6 cursor-pointer">
+            <IoReturnDownBack className="text-4xl font-bold" />
+            <span className="font-bold"> Add Task</span>
+          </button>
+        </Link>
       </div>
     </div>
   );

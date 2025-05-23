@@ -1,6 +1,7 @@
 import { useContext, useEffect } from "react";
 import { Link, useLoaderData } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
+import { IoReturnDownBack } from "react-icons/io5";
 
 const TaskDetails = () => {
   const { bids, setBids } = useContext(AuthContext);
@@ -19,11 +20,12 @@ const TaskDetails = () => {
       <h1 className="text-center text-primary">
         You bid for {bids.length} opportunities.
       </h1>
-      <button className="rounded-sm px-3 mb-4 bg-primary text-white border-secondary">
-        <Link className="font text-xl" to="/">
-          Go Home
-        </Link>
-      </button>
+      <Link className="font text-xl" to="/browseTasks">
+        <button className="border rounded-sm px-3 mb-4 bg-primary text-white flex gap-2 items-center mt-6 cursor-pointer">
+          <IoReturnDownBack className="text-4xl font-bold" />
+          <span className="font-bold">Browse Tasks</span>
+        </button>
+      </Link>
       <div className="bg-base-300 rounded-sm">
         <div className="flex items-center justify-between p-6">
           <div>

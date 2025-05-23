@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link, useNavigate, useParams } from "react-router";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthContext";
+import { IoReturnDownBack } from "react-icons/io5";
 
 const BidForm = () => {
   const navigate = useNavigate();
@@ -55,16 +56,24 @@ const BidForm = () => {
       </Helmet>
       {/* Content */}
       <div className="text-center mb-10">
-        <h1 className="text-4xl font-bold">Bid Form</h1>
+        <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+          Bid Form
+        </h1>
       </div>
-      <Link to="/browseTasks">
-        <button className="btn bg-primary text-white mb-3">Back</button>
+      <Link className="font text-xl" to="/browseTasks">
+        <button className="border rounded-sm px-3 mb-4 bg-primary text-white flex gap-2 items-center mt-6 cursor-pointer">
+          <IoReturnDownBack className="text-4xl font-bold" />
+          <span className="font-bold">Back</span>
+        </button>
       </Link>
       {/* Form */}
-      <form onSubmit={handleBidForm} className="bg-base-300 rounded-lg">
-        <div className="grid grid-cols-1 md:grid-cols-2">
+      <form
+        onSubmit={handleBidForm}
+        className="bg-secondary p-4 *:border-0 rounded-lg"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 *:border-0">
           <fieldset className="fieldset border-base-300 rounded-box w-full border p-4">
-            <label className="label">Amount</label>
+            <label className="label text-white">Amount</label>
             <input
               type="number"
               name="amount"
@@ -74,7 +83,7 @@ const BidForm = () => {
           </fieldset>
 
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-            <label className="label">Duration</label>
+            <label className="label text-white">Duration</label>
             <input
               type="text"
               name="duration"
@@ -84,7 +93,7 @@ const BidForm = () => {
           </fieldset>
         </div>
         <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-          <label className="label">CoverLetter</label>
+          <label className="label text-white">CoverLetter</label>
           <textarea
             type="text"
             name="coverLetter"
