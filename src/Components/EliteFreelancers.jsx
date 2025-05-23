@@ -14,16 +14,16 @@ const EliteFreelancers = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {eliteFreelancers.map((freelancer) => (
-        <div className="rounded-lg space-y-1 bg-slate-100 ">
+        <div className="rounded-lg bg-slate-100 ">
           <div className="relative">
             <img
-              className="w-full h-[300px] rounded-tr-lg rounded-tl-lg mb-4"
+              className="w-full h-[250px] rounded-tr-lg rounded-tl-lg"
               src={freelancer.image}
               alt=""
             />
           </div>
 
-          <div className="mx-6 space-y-1 mb-3 text-black">
+          <div className="px-6 space-y-1 py-3 text-black bg-secondary text-white rounded-bl-lg rounded-br-lg">
             <h2>{freelancer.name}</h2>
             <p>{freelancer.title}</p>
             <div>
@@ -34,10 +34,10 @@ const EliteFreelancers = () => {
                 <FaStar />
                 <FaStar />
                 <FaStar />
-                <p className="text-black ml-2 text-sm">5.00</p>
+                <p className="text-white ml-2 text-sm">5.00</p>
               </div>
 
-              <span className="font-semibold">Projects:</span>
+              <span className="font-semibold">Projects: </span>
               {freelancer.projects}
               <del className="text-gray-500 text-sm ml-2"></del>
             </div>

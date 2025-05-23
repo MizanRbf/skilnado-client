@@ -8,7 +8,7 @@
     "skills": ["React", "Node.js", "Firebase"],
     "location": "Bangladesh",
     "verified": true,
-    "image": "https://randomuser.me/api/portraits/men/32.jpg"
+    "image": "https://i.ibb.co/5hx0F4Mp/download.jpg"
   },
   {
     "id": 2,
@@ -19,7 +19,7 @@
     "skills": ["MongoDB", "Express", "React", "Node.js"],
     "location": "USA",
     "verified": true,
-    "image": "https://randomuser.me/api/portraits/men/45.jpg"
+    "image": "https://i.ibb.co/FLYyQTSk/images.jpg"
   },
   {
     "id": 3,
@@ -30,7 +30,7 @@
     "skills": ["HTML", "CSS", "JavaScript", "React"],
     "location": "Australia",
     "verified": true,
-    "image": "https://randomuser.me/api/portraits/men/75.jpg"
+    "image": "https://i.ibb.co/nNLT87SW/download.jpg"
   },
   {
     "id": 4,
@@ -41,7 +41,7 @@
     "skills": ["Laravel", "MySQL", "API Development"],
     "location": "Canada",
     "verified": false,
-    "image": "https://randomuser.me/api/portraits/men/51.jpg"
+    "image": "https://i.ibb.co/JwJtgzYg/download.jpg"
   },
   {
     "id": 5,
@@ -52,7 +52,7 @@
     "skills": ["WordPress", "Elementor", "WooCommerce"],
     "location": "United Kingdom",
     "verified": true,
-    "image": "https://randomuser.me/api/portraits/men/22.jpg"
+    "image": "https://i.ibb.co/rfXrWWVj/download.jpg"
   },
   {
     "id": 6,
@@ -63,6 +63,6 @@
     "skills": ["Docker", "AWS", "CI/CD", "Linux"],
     "location": "Brasil",
     "verified": true,
-    "image": "https://randomuser.me/api/portraits/men/66.jpg"
+    "image": "https://i.ibb.co/1JTYMkLc/download.jpg"
   }
 ]

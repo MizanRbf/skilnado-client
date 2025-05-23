@@ -42,7 +42,9 @@ const HomePage = () => {
       {/* Elite Freelancers */}
       <div className="mt-30">
         <div className="mb-6">
-          <h1 className="mb-3 text-primary">Elite Freelancers</h1>
+          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+            Elite Freelancers
+          </h1>
         </div>
         <EliteFreelancers></EliteFreelancers>
       </div>
@@ -50,7 +52,9 @@ const HomePage = () => {
       {/* Testimonials */}
       <div className="mt-30 mb-20">
         <div className=" mb-6">
-          <h1 className="mb-3  text-primary">Testimonials</h1>
+          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+            Testimonials
+          </h1>
 
           <Testimonials></Testimonials>
         </div>
