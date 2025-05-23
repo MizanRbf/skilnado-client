@@ -53,36 +53,42 @@ export default function Testimonials() {
             key={testimonial.id}
             className="w-[300px] swiper-slide-custom mb-10"
           >
-            <div className="testimonial-box bg-white p-6 rounded-tl-2xl rounded-tr-2xl rounded-bl-[60px] rounded-br-[60px] border border-slate-200 shadow-lg text-center relative mb-30">
-              {/* Absolute div */}
-              <div className="absolute top-0 right-0 left-0 bottom-[190px] bg-primary rounded-tl-2xl rounded-tr-2xl z-0"></div>
+            <div className="testimonial-box p-6 border border-slate-200 shadow-lg text-center relative mb-30 bg-secondary rounded-br-[50px]">
+              {/* Comment */}
+              <div className="bg-white relative p-2 rounded-lg shadow-2xl">
+                {/* Quote Icon */}
+                <div className="flex justify-center">
+                  <FaQuoteLeft />
+                </div>
 
+                {/* Comment Text */}
+                <p className="text-sm">"{testimonial.comment}"</p>
+                {/* Tail Div */}
+                <div className="absolute -bottom-3 left-8 w-0 h-0 border-l-[10px] border-l-transparent border-r-[20px] border-r-transparent border-t-[12px] border-t-white"></div>
+              </div>
               {/* Image */}
-              <div className="flex justify-center">
-                <div className="mb-1 ring-primary ring-2 rounded-full max-w-[70px] ring-offset-2 z-9">
+              <div className="flex gap-5 mt-10 justify-center">
+                <div className=" ring-white ring-1 rounded-full max-w-[70px] ring-offset-1 z-9">
                   <img
-                    className="rounded-full"
+                    className="rounded-full p-1"
                     src={testimonial.photo}
                     alt=""
                   />
                 </div>
+                <div className="text-white">
+                  <p className="font-semibold text-lg mt-2">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-xs">{testimonial.position}</p>
+                  <div className="flex text-white justify-center *:text-xs space-x-1">
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                    <FaStar />
+                  </div>
+                </div>
               </div>
-
-              <p className="font-semibold text-sm mt-2">{testimonial.name}</p>
-              <p className="text-[8px] mb-4">{testimonial.position}</p>
-
-              <div className="flex text-amber-500 justify-center mb-2">
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-                <FaStar />
-              </div>
-
-              <div className="flex justify-center">
-                <FaQuoteLeft />
-              </div>
-              <p className="text-sm">"{testimonial.comment}"</p>
             </div>
           </SwiperSlide>
         ))}
