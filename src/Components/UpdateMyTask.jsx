@@ -39,23 +39,22 @@ const UpdateMyTask = () => {
   };
 
   return (
-    <div className="p-28">
+    <div className="mt-30">
       {/* Content */}
-      <div className="text-center p-16">
-        <h1 className="text-4xl font-bold">Update Your Data</h1>
-        <p>
-          It is a long established fact that a reader will be distraceted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using Content here.
-        </p>
+      <div className="text-center">
+        <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+          Update Your Data
+        </h1>
       </div>
 
       {/* Form */}
-      <form onSubmit={handleUpdateMyTask} className="bg-base-300 rounded-lg">
-        <div className="grid grid-cols-1 md:grid-cols-2">
+      <form
+        onSubmit={handleUpdateMyTask}
+        className="bg-secondary p-4 rounded-lg *:border-0"
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 *:border-0">
           <fieldset className="fieldset border-base-300 rounded-box w-full border p-4">
-            <label className="label">Task Title</label>
+            <label className="label text-white">Task Title</label>
             <input
               type="text"
               defaultValue={taskTitle}
@@ -65,7 +64,7 @@ const UpdateMyTask = () => {
             />
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-            <label className="label">Category</label>
+            <label className="label text-white">Category</label>
             <select defaultValue="Category" name="category" className="select">
               <option disabled={true}>Category</option>
               <option>Web Development</option>
@@ -75,7 +74,7 @@ const UpdateMyTask = () => {
             </select>
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-            <label className="label">Deadline</label>
+            <label className="label text-white">Deadline</label>
             <input
               type="date"
               name="deadline"
@@ -84,7 +83,7 @@ const UpdateMyTask = () => {
             />
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-            <label className="label">Budget</label>
+            <label className="label text-white">Budget</label>
             <input
               type="text"
               defaultValue={budget}
@@ -94,7 +93,7 @@ const UpdateMyTask = () => {
             />
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-            <label className="label">User Email</label>
+            <label className="label text-white">User Email</label>
             <input
               type="email"
               value={email}
@@ -104,7 +103,7 @@ const UpdateMyTask = () => {
             />
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-            <label className="label">User Name</label>
+            <label className="label text-white">User Name</label>
             <input
               type="text"
               value={name}
@@ -116,7 +115,7 @@ const UpdateMyTask = () => {
         </div>
         {/* Description */}
         <fieldset className="fieldset  border-base-300 rounded-box w-full border p-4">
-          <label className="label">Description</label>
+          <label className="label text-white">Description</label>
           <textarea
             type="text"
             defaultValue={description}
