@@ -81,7 +81,7 @@ const MyPostedTasks = () => {
   return (
     <div className="max-w-[1200px] mx-auto mt-30 md:mt-20 mb-6">
       <Helmet>
-        <title>Skilnado || MyTask</title>
+        <title>Skilnado || MyTasks</title>
       </Helmet>
       {/* Modal */}
       <dialog id="my_modal_2" className="modal">

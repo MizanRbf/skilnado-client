@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { Link, useLoaderData } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
 import { IoReturnDownBack } from "react-icons/io5";
+import { Helmet } from "react-helmet-async";
 
 const TaskDetails = () => {
   const { bids, setBids } = useContext(AuthContext);
@@ -17,6 +18,9 @@ const TaskDetails = () => {
 
   return (
     <div className="max-w-[1200px] mx-auto mt-30 md:mt-20 mb-10">
+      <Helmet>
+        <title>Skilnado || Task Details</title>
+      </Helmet>
       <div className="bg-secondary py-4 rounded-sm mb-10">
         <p className="text-center text-white text-xl md:text-4xl font-bold">
           You bid for{" "}

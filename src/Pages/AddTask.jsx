@@ -69,7 +69,11 @@ const AddTask = () => {
           </fieldset>
           <fieldset className="fieldset  border-base-300 rounded-box w-full p-4">
             <label className="label text-white">Category</label>
-            <select defaultValue="Category" name="category" className="select">
+            <select
+              defaultValue="Category"
+              name="category"
+              className="select w-full"
+            >
               <option disabled={true}>Category</option>
               <option>Web Development</option>
               <option>Design</option>

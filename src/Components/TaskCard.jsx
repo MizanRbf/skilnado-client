@@ -6,10 +6,7 @@ const TaskCard = ({ task }) => {
   const { _id, taskTitle, category, budget, email, name } = task;
 
   return (
-    <div className="bg-secondary text-white rounded-4xl">
-      <Helmet>
-        <title>Skilnado || Task Details</title>
-      </Helmet>
+    <div className="bg-secondary text-white rounded-bl-4xl rounded-br-4xl border border-primary">
       <div className="bg-black text-center py-2">
         <h2>{taskTitle}</h2>
       </div>

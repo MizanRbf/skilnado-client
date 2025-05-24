@@ -52,7 +52,7 @@ const BidForm = () => {
   return (
     <div className="mt-30 md:mt-20 mb-10 text-black">
       <Helmet>
-        <title>Skilnado || Bids</title>
+        <title>Skilnado || Bid Form</title>
       </Helmet>
       {/* Content */}
       <div className="text-center mb-10">

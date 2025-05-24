@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link, useLoaderData } from "react-router";
 import TaskCard from "../Components/TaskCard";
 import { IoReturnDownBack } from "react-icons/io5";
+import { Helmet } from "react-helmet-async";
 
 const BrowseTasks = () => {
   const initialTasks = useLoaderData();
@@ -10,6 +11,9 @@ const BrowseTasks = () => {
 
   return (
     <div className="mt-30 md:mt-20  max-w-[1200px] mx-auto px- text-black mb-10">
+      <Helmet>
+        <title>Skilnado || BrowseTasks</title>
+      </Helmet>
       <div className="">
         <div className="text-center">
           <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
