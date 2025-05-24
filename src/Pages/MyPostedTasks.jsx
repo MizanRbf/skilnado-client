@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import { AuthContext } from "../Provider/AuthContext";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { MdDelete, MdEdit } from "react-icons/md";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
@@ -13,6 +13,7 @@ const MyPostedTasks = () => {
   const [bids, setBids] = useState([]);
   const [myTasks, setMyTasks] = useState([]);
   const [bidsOfThis, setBidsOfThis] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (user?.email) {
@@ -63,6 +64,11 @@ const MyPostedTasks = () => {
     });
   };
 
+  // Handle See Details
+  const handleSeeDetails = (taskId) => {
+    navigate(`/bidsDetails/${taskId}`);
+  };
+
   // Modal
   const handleModal = (taskId) => {
     if (!bids || bids.length == 0) {
@@ -91,7 +97,16 @@ const MyPostedTasks = () => {
 
           <div className="modal-action">
             <form method="dialog">
-              <button className="btn">Close</button>
+              <button
+                onClick={() => handleSeeDetails(bidsOfThis[0]?.projectId)}
+                className="btn mr-3 bg-secondary border-0 text-white text-lg"
+              >
+                See Details
+              </button>
+
+              <button className="btn bg-red-700 text-white border-0 text-lg">
+                Close
+              </button>
             </form>
           </div>
         </div>

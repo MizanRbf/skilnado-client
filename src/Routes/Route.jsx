@@ -13,6 +13,7 @@ import Loader from "../Components/Loader";
 import UpdateMyTask from "../Components/UpdateMyTask";
 import BidForm from "../Components/BidForm";
 import PrivateRoute from "../Provider/PrivateRoute";
+import BidsDetails from "../Components/BidsDetails";
 
 export const router = createBrowserRouter([
   {
@@ -68,6 +69,10 @@ export const router = createBrowserRouter([
             <UpdateMyTask></UpdateMyTask>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/bidsDetails/:taskId",
+        Component: BidsDetails,
       },
     ],
   },
