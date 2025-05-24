@@ -22,11 +22,12 @@ const EliteFreelancers = () => {
             />
           </div>
 
-          <div className="px-6 space-y-1 py-3 bg-secondary text-white rounded-bl-lg rounded-br-lg">
-            <h2>{freelancer.name}</h2>
-            <p>{freelancer.title}</p>
-            <div>
+          <div className="bg-secondary rounded-bl-xl rounded-br-xl">
+            <div className="px-6 space-y-1 py-3  text-white">
+              <h2>{freelancer.name}</h2>
+              <p>{freelancer.title}</p>
               <p className="text-lg font-semibold">{freelancer.location}</p>
+
               <div className="flex items-center text-amber-500 mb-2 text-lg">
                 <FaStar />
                 <FaStar />
@@ -35,11 +36,28 @@ const EliteFreelancers = () => {
                 <FaStar />
                 <p className="text-white ml-2 text-sm">5.00</p>
               </div>
-
-              <span className="font-semibold">Projects: </span>
-              {freelancer.projects}
-              <del className="text-gray-500 text-sm ml-2"></del>
+              <p>
+                <span className="font-semibold">Projects: </span>
+                {freelancer.projects}
+              </p>
+              <p>
+                <span className="font-semibold">Email: </span>
+                {freelancer.email}
+              </p>
+              <div className="flex gap-3">
+                <p className="font-bold">Skills:</p>
+                {freelancer.skills.map((skill) => (
+                  <div>
+                    <p className="bg-amber-300 text-black px-2 rounded-xl text-xs">
+                      {skill}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
+            <button className="bg-primary w-full rounded-bl-xl rounded-br-xl text-white font-bold py-2">
+              Send Mail
+            </button>
           </div>
         </div>
       ))}

@@ -37,7 +37,7 @@ const Header = () => {
           </span>
           <img className="w-30 md:w-50" src="/assets/logo.png" alt="" />
           <ul
-            className={`top-14 left-0 absolute p-1 shadow bg-[#0e2b01] border-2 border-[#3bb90565] rounded-md text-lg font-bold text-white space-y-2 z-9 ${
+            className={`top-13 left-0 absolute p-1 shadow bg-[#0e2b01] border-2 border-[#3bb90565] *:hover:bg-white *:hover:text-black *:hover:duration-300 rounded-md text-lg font-bold text-white space-y-2 z-9 ${
               !open ? "hidden" : "block"
             }`}
           >
@@ -85,6 +85,7 @@ const Header = () => {
                     alt="User"
                   />
                 </div>
+
                 <Tooltip anchorSelect=".my-anchor-element" place="left">
                   <p>{user?.displayName || "User"}</p>
                   <p>{user?.email || "User"}</p>

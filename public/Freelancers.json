@@ -8,7 +8,8 @@
     "skills": ["React", "Node.js", "Firebase"],
     "location": "Bangladesh",
     "verified": true,
-    "image": "https://i.ibb.co/5hx0F4Mp/download.jpg"
+    "image": "https://i.ibb.co/5hx0F4Mp/download.jpg",
+    "email": "mizanur.rahman@example.com"
   },
   {
     "id": 2,
@@ -19,7 +20,8 @@
     "skills": ["MongoDB", "Express", "React", "Node.js"],
     "location": "USA",
     "verified": true,
-    "image": "https://i.ibb.co/FLYyQTSk/images.jpg"
+    "image": "https://i.ibb.co/FLYyQTSk/images.jpg",
+    "email": "tanvir.hossain@example.com"
   },
   {
     "id": 3,
@@ -30,7 +32,8 @@
     "skills": ["HTML", "CSS", "JavaScript", "React"],
     "location": "Australia",
     "verified": true,
-    "image": "https://i.ibb.co/nNLT87SW/download.jpg"
+    "image": "https://i.ibb.co/nNLT87SW/download.jpg",
+    "email": "nahid.hasan@example.com"
   },
   {
     "id": 4,
@@ -41,7 +44,8 @@
     "skills": ["Laravel", "MySQL", "API Development"],
     "location": "Canada",
     "verified": false,
-    "image": "https://i.ibb.co/JwJtgzYg/download.jpg"
+    "image": "https://i.ibb.co/JwJtgzYg/download.jpg",
+    "email": "raihan.kabir@example.com"
   },
   {
     "id": 5,
@@ -52,7 +56,8 @@
     "skills": ["WordPress", "Elementor", "WooCommerce"],
     "location": "United Kingdom",
     "verified": true,
-    "image": "https://i.ibb.co/rfXrWWVj/download.jpg"
+    "image": "https://i.ibb.co/rfXrWWVj/download.jpg",
+    "email": "fahim.chowdhury@example.com"
   },
   {
     "id": 6,
@@ -63,6 +68,7 @@
     "skills": ["Docker", "AWS", "CI/CD", "Linux"],
     "location": "Brasil",
     "verified": true,
-    "image": "https://i.ibb.co/1JTYMkLc/download.jpg"
+    "image": "https://i.ibb.co/1JTYMkLc/download.jpg",
+    "email": "shahriar.hossain@example.com"
   }
 ]
