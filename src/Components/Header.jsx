@@ -92,7 +92,6 @@ const Header = () => {
 
                 <Tooltip anchorSelect=".my-anchor-element" place="left">
                   <p>{user?.displayName || "User"}</p>
-                  <p>{user?.email || "User"}</p>
                 </Tooltip>
               </a>
             )}
