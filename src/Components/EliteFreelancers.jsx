@@ -13,7 +13,7 @@ const EliteFreelancers = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {eliteFreelancers.map((freelancer) => (
-        <div className="rounded-lg bg-slate-100 ">
+        <div key={freelancer.id} className="rounded-lg bg-slate-100 ">
           <div className="relative">
             <img
               className="w-full h-[250px] rounded-tr-lg rounded-tl-lg"

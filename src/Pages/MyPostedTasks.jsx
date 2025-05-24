@@ -126,16 +126,18 @@ const MyPostedTasks = () => {
                 <th>No.</th>
                 <th>Name</th>
                 <th>Category</th>
+                <th>Budget</th>
                 <th>Deadline</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               {myTasks.map((myTask, index) => (
-                <tr className="border-2 border-white">
+                <tr key={myTask._id} className="border-2 border-white">
                   <th>{index + 1}</th>
                   <td>{myTask.name}</td>
                   <td>{myTask.category}</td>
+                  <td>{myTask.budget}</td>
                   <td>
                     <div className="bg-white text-black rounded-xl text-center font-bold">
                       <Deadline deadline={myTask.deadline}></Deadline>

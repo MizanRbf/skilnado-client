@@ -33,7 +33,10 @@ const HomePage = () => {
           {/* Featured Card */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {featuredTasks.map((featuredTask) => (
-              <FeaturedCard featuredTask={featuredTask}></FeaturedCard>
+              <FeaturedCard
+                key={featuredTask._id}
+                featuredTask={featuredTask}
+              ></FeaturedCard>
             ))}
           </div>
         </div>

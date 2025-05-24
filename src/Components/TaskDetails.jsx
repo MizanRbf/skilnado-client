@@ -9,7 +9,16 @@ import Deadline from "./Deadline";
 const TaskDetails = () => {
   const { bids, setBids, user } = useContext(AuthContext);
   const task = useLoaderData();
-  const { _id, taskTitle, category, deadline, budget, email, name } = task;
+  const {
+    _id,
+    taskTitle,
+    category,
+    deadline,
+    budget,
+    email,
+    name,
+    description,
+  } = task;
 
   useEffect(() => {
     fetch("https://skilnado-server.vercel.app/bids")
@@ -58,6 +67,9 @@ const TaskDetails = () => {
               </p>
               <p>
                 <span className="font-bold">Deadline: </span> {deadline}
+              </p>
+              <p>
+                <span className="font-bold">Description: </span> {description}
               </p>
             </div>
             {/* User Related */}
