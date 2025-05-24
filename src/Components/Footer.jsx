@@ -34,13 +34,13 @@ const Footer = () => {
           <Link to="/" className="link link-hover">
             Home
           </Link>
-          <Link to="/myProfile" className="link link-hover">
+          <Link to="/addTask" className="link link-hover">
             Add Task
           </Link>
-          <Link to="/myProfile" className="link link-hover">
+          <Link to="/browseTasks" className="link link-hover">
             Browse Tasks
           </Link>
-          <Link to="/myProfile" className="link link-hover">
+          <Link to="/myPostedTasks" className="link link-hover">
             My Posted Tasks
           </Link>
         </nav>

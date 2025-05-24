@@ -1,14 +1,18 @@
 :root {
   --body_background: white;
   --body_color: black;
-  /* --link_color: navy; */
-  
 }
-[data-theme="dark"]{
+
+.dark {
+  --body_background: black;
+  --body_color: white;
+}
+
+/* [data-theme="dark"]{
    --body_background: black;
   --body_color: white;
-  /* --link_color: cyan; */
-}
+} */
+ 
 body {
   background-color: var(--body_background);
   color: var(--body_color);

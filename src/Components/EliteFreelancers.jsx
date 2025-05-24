@@ -42,6 +42,7 @@ const EliteFreelancers = () => {
               </p>
               <p>
                 <span className="font-semibold">Email: </span>
+                <br />
                 {freelancer.email}
               </p>
               <div className="flex gap-3">
