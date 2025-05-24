@@ -6,7 +6,7 @@ import Footer from "../Components/Footer";
 const RootLayout = () => {
   return (
     <div>
-      <header className="max-w-[1200px] mx-auto">
+      <header>
         {/* Header */}
         <Header></Header>
       </header>

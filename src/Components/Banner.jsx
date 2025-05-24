@@ -27,7 +27,7 @@ export default function Banner() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper"
+        className="mySwiper mt-4"
       >
         {/* Slide - 1 */}
         <SwiperSlide className="rounded-xl">

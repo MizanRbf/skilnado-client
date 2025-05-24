@@ -1,12 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router";
 import { AuthContext } from "../Provider/AuthContext";
 import { Tooltip } from "react-tooltip";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { RxCross2 } from "react-icons/rx";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
   const navigate = useNavigate();
-  const isHome = location.pathname === "/";
+  const [open, setOpen] = useState(false);
 
   // sign out
   const handleSignOut = () => {
@@ -21,34 +23,23 @@ const Header = () => {
   };
 
   return (
-    <div className="navbar bg-base-100 px-4 max-w-[1200px] mx-auto py-4 md:static fixed top-0 right-0 left-0 z-9 text-black">
-      {!isHome && (
-        <div className="absolute border-b border-slate-200 w-full top-[72px] left-0 right-0"></div>
-      )}
-      <div className="navbar-start">
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="md:hidden mr-3">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {" "}
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />{" "}
-            </svg>
-          </div>
-
+    <div className="bg-[#0e2b01] text-black border-2 border-b-[#3bb90565] border-x-0 border-t-0 py-4">
+      <div className="flex justify-between items-center max-w-[1200px] mx-auto md:px-4">
+        {/* Logo */}
+        <div className="flex items-center gap-3 relative">
           {/* Responsive Menubar */}
+          <span onClick={() => setOpen(!open)}>
+            {open ? (
+              <RxCross2 className="text-primary cursor-pointer  lg:hidden text-2xl" />
+            ) : (
+              <GiHamburgerMenu className="text-primary cursor-pointer lg:hidden text-2xl" />
+            )}
+          </span>
+          <img className="w-30 md:w-50" src="/assets/logo.png" alt="" />
           <ul
-            tabIndex={0}
-            className="menu menu-md dropdown-content bg-primary text-white rounded-lg z-1 mt-3 w-52 p-2 shadow *:hover:text-black *:hover:bg-white *:rounded-sm *:duration-300"
+            className={`top-14 left-0 absolute p-1 shadow bg-[#0e2b01] border-2 border-[#3bb90565] rounded-md text-lg font-bold text-white space-y-2 z-9 ${
+              !open ? "hidden" : "block"
+            }`}
           >
             <li>
               <Link to="/">Home</Link>
@@ -64,12 +55,9 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <img className="w-30 md:w-50" src="/assets/logo.png" alt="" />
-      </div>
 
-      {/* Menubar for Large Device */}
-      <div className="navbar-center hidden md:flex">
-        <ul className="space-x-6 *:hover:text-primary *:hover:underline menu-horizontal px-1">
+        {/* Menubar for Large Device */}
+        <ul className="lg:flex text-white gap-4 md:gap-10 hidden">
           <li>
             <NavLink to="/">Home</NavLink>
           </li>
@@ -83,40 +71,47 @@ const Header = () => {
             <NavLink to="/myPostedTasks">My Posted Tasks</NavLink>
           </li>
         </ul>
-      </div>
 
-      {/* Login Button */}
-      <div className="navbar-end gap-3">
-        {/* User Info */}
-        {user && (
-          <a className="my-anchor-element">
-            <div className="relative group cursor-pointer ring-primary ring-2 ring-offset-2 rounded-full">
-              <img
-                className=" rounded-full min-w-[30px] md:min-w-[35px] h-[30px] md:h-[35px]"
-                src={user.photoURL}
-                alt="User"
-              />
-            </div>
-            <Tooltip anchorSelect=".my-anchor-element" place="left">
-              <p>{user?.displayName || "User"}</p>
-              <p>{user?.email || "User"}</p>
-            </Tooltip>
-          </a>
-        )}
-
-        {user ? (
-          <button
-            onClick={handleSignOut}
-            to=""
-            className="btn btn-primary px-8 text-white"
-          >
-            Logout
-          </button>
-        ) : (
-          <Link to="/auth/login" className="text-white btn btn-primary px-8">
-            Login
-          </Link>
-        )}
+        {/* Login Info */}
+        <div className="flex gap-4 items-center">
+          {/* User Info */}
+          <div>
+            {user && (
+              <a className="my-anchor-element">
+                <div className="relative group cursor-pointer ring-primary ring-2 ring-offset-2 rounded-full">
+                  <img
+                    className=" rounded-full min-w-[30px] md:min-w-[35px] h-[30px] md:h-[35px]"
+                    src={user.photoURL}
+                    alt="User"
+                  />
+                </div>
+                <Tooltip anchorSelect=".my-anchor-element" place="left">
+                  <p>{user?.displayName || "User"}</p>
+                  <p>{user?.email || "User"}</p>
+                </Tooltip>
+              </a>
+            )}
+          </div>
+          {/* Log Button */}
+          <div>
+            {user ? (
+              <button
+                onClick={handleSignOut}
+                to=""
+                className="btn btn-primary px-8 text-white"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link
+                to="/auth/login"
+                className="text-white btn btn-primary px-8"
+              >
+                Login
+              </Link>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
