@@ -120,14 +120,16 @@ const MyPostedTasks = () => {
                   <td>{myTask.name}</td>
                   <td>{myTask.category}</td>
                   <td>
-                    <Deadline deadline={myTask.deadline}></Deadline>
+                    <div className="bg-white text-black rounded-xl text-center">
+                      <Deadline deadline={myTask.deadline}></Deadline>
+                    </div>
                   </td>
                   <td>
                     <div className="flex items-center gap-3">
                       {/* Update Button */}
                       <Link to={`/updateMyTask/${myTask._id}`}>
                         <button className="bg-blue-700 p-2 rounded-sm text-white btn border-0">
-                          <MdEdit />
+                          <MdEdit className="text-xl" />
                         </button>
                       </Link>
                       {/* Delete Button */}
@@ -136,7 +138,7 @@ const MyPostedTasks = () => {
                           onClick={() => handleDelete(myTask._id)}
                           className="bg-red-500 p-2 rounded-sm text-white btn border-0"
                         >
-                          <MdDelete />
+                          <MdDelete className="text-xl" />
                         </button>
                       </Link>
                       {/* Bids Button */}
