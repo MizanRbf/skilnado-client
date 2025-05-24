@@ -46,6 +46,7 @@ This project uses the following major NPM packages:
 
 ## ✨ Live URL
 
+- https://skilnado.web.app
 ---
 
 Copyright © 2025 - All rights reserved by Skilnado.
