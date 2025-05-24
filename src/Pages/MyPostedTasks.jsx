@@ -94,7 +94,7 @@ const MyPostedTasks = () => {
         {/* Modal */}
         <dialog id="my_modal_2" className="modal">
           <div className="modal-box">
-            <h3 className="font-bold text-lg">
+            <h3 className="font-bold text-lg text-black">
               Total Bids: {bidsOfThis.length}
             </h3>
 
@@ -129,8 +129,10 @@ const MyPostedTasks = () => {
               myTasks.length > 0 ? "hidden" : "block"
             }`}
           >
-            <h1 className="text-center">You have not added any task yet.</h1>
-            <h4 className="text-center mt-8">
+            <h1 className="text-center text-black">
+              You have not added any task yet.
+            </h1>
+            <h4 className="text-center mt-8 text-black">
               Go to Add Task for posting your task.
             </h4>
           </div>

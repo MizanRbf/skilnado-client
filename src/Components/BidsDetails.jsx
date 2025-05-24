@@ -27,12 +27,21 @@ const BidsDetails = () => {
             </h1>
           </div>
         )}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
           {bids.map((bid) => (
             <div className="bg-secondary rounded-xl p-4 text-white">
-              <p>{bid.amount}</p>
-              <p>{bid.duration}</p>
-              <p>{bid.coverLetter}</p>
+              <p>
+                <span>Amount: </span>
+                {bid.amount}
+              </p>
+              <p>
+                <span>Duration: </span>
+                {bid.duration}
+              </p>
+              <p>
+                <span>CoverLetter: </span>
+                {bid.coverLetter}
+              </p>
             </div>
           ))}
         </div>
