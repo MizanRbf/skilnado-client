@@ -100,10 +100,10 @@ const Register = () => {
           <div className="flex justify-center">
             <img className="w-50 mb-3" src="/assets/logo.png" alt="" />
           </div>
-          <h2 className="text-center">Register your account</h2>
+          <h2 className="text-center text-black">Register your account</h2>
           <hr className="border-base-300 my-3" />
 
-          <form onSubmit={handleRegister} className="fieldset">
+          <form onSubmit={handleRegister} className="fieldset text-black">
             {/* Name */}
             <label className="label">Your Name</label>
             <input
@@ -163,7 +163,7 @@ const Register = () => {
           {/* ErrorMessage */}
           {/* <p className="text-red-500">{errorMessage}</p> */}
 
-          <p className="text-center">
+          <p className="text-center text-black">
             Already have an account?{" "}
             <Link className="text-red-600 hover:underline" to="/auth/login">
               Login

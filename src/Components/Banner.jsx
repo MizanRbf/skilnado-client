@@ -14,7 +14,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 export default function Banner() {
   return (
-    <>
+    <div className="pt-24 md:pt-30">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
@@ -27,7 +27,7 @@ export default function Banner() {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper mt-25 "
+        className="mySwiper"
       >
         {/* Slide - 1 */}
         <SwiperSlide className="rounded-xl">
@@ -120,6 +120,6 @@ export default function Banner() {
           </div>
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   );
 }

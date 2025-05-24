@@ -94,9 +94,9 @@ const Login = () => {
           <div className="flex justify-center">
             <img className="w-50 mb-3" src="/assets/logo.png" alt="" />
           </div>
-          <h2 className="text-center">Login your account</h2>
+          <h2 className="text-center text-black">Login your account</h2>
           <hr className="border-base-300 my-3" />
-          <form onSubmit={handleLoginForm} className="fieldset">
+          <form onSubmit={handleLoginForm} className="fieldset text-black">
             {/* Email */}
             <label className="label">Email Address</label>
 
@@ -176,7 +176,7 @@ const Login = () => {
             </svg>
             Login with Google
           </button>
-          <p className="text-center">
+          <p className="text-center text-black">
             Don't have an account?{" "}
             <Link className="text-red-600 hover:underline" to="/auth/register">
               Register
