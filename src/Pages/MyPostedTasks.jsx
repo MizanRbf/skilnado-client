@@ -83,6 +83,7 @@ const MyPostedTasks = () => {
       <Helmet>
         <title>Skilnado || MyTasks</title>
       </Helmet>
+
       {/* Modal */}
       <dialog id="my_modal_2" className="modal">
         <div className="modal-box">
@@ -95,16 +96,32 @@ const MyPostedTasks = () => {
           </div>
         </div>
       </dialog>
+
+      {/* Title */}
       <div className="my-10">
         <div className="text-center">
           <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
             My Posted Tasks
           </h1>
         </div>
+
+        {/* Empty Message */}
+        <div
+          className={`bg-slate-200 rounded-lg py-30 ${
+            myTasks.length > 0 ? "hidden" : "block"
+          }`}
+        >
+          <h1 className="text-center">You have not added any task yet.</h1>
+          <h4 className="text-center mt-8">
+            Go to Add Task for posting your task.
+          </h4>
+        </div>
         <div className="overflow-x-auto">
           <table className="table bg-secondary text-white">
             {/* head */}
-            <thead className="text-white text-lg bg-whiter">
+            <thead
+              className={`text-white text-lg ${myTasks.length < 1 && "hidden"}`}
+            >
               <tr>
                 <th>No.</th>
                 <th>Name</th>
@@ -120,7 +137,7 @@ const MyPostedTasks = () => {
                   <td>{myTask.name}</td>
                   <td>{myTask.category}</td>
                   <td>
-                    <div className="bg-white text-black rounded-xl text-center">
+                    <div className="bg-white text-black rounded-xl text-center font-bold">
                       <Deadline deadline={myTask.deadline}></Deadline>
                     </div>
                   </td>

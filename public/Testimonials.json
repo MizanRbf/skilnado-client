@@ -1,12 +1,5 @@
 [
   {
-    "id": 1,
-    "name": "Mohammad Rahim",
-    "photo": "https://randomuser.me/api/portraits/men/1.jpg",
-    "position": "Startup Founder",
-    "comment": "An excellent platform for finding freelance developers quickly and securely."
-  },
-  {
     "id": 2,
     "name": "James Miller",
     "photo": "https://randomuser.me/api/portraits/men/2.jpg",

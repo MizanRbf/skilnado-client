@@ -69,7 +69,7 @@ export default function Testimonials() {
                 <div className="absolute -bottom-3 left-8 w-0 h-0 border-l-[10px] border-l-transparent border-r-[20px] border-r-transparent border-t-[12px] border-t-white"></div>
               </div>
               {/* Image */}
-              <div className="flex gap-5 mt-10 justify-center">
+              <div className="flex gap-5 mt-10 justify-center items-center">
                 <div className=" ring-white ring-1 rounded-full max-w-[70px] ring-offset-1 z-9">
                   <img
                     className="rounded-full p-1"
@@ -78,9 +78,7 @@ export default function Testimonials() {
                   />
                 </div>
                 <div className="text-white">
-                  <p className="font-semibold text-lg mt-2">
-                    {testimonial.name}
-                  </p>
+                  <p className="font-semibold text-lg ">{testimonial.name}</p>
                   <p className="text-xs">{testimonial.position}</p>
                   <div className="flex text-white justify-center *:text-xs space-x-1">
                     <FaStar />

@@ -69,10 +69,6 @@ export const router = createBrowserRouter([
           </PrivateRoute>
         ),
       },
-      {
-        path: "/bids/:id",
-        Component: BidForm,
-      },
     ],
   },
   // AuthLayout

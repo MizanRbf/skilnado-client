@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
-import { Helmet } from "react-helmet-async";
-import { Link, useNavigate, useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Provider/AuthContext";
-import { IoReturnDownBack } from "react-icons/io5";
 
 const BidForm = () => {
   const navigate = useNavigate();
@@ -20,7 +18,7 @@ const BidForm = () => {
     newBid.projectId = currentProjectId;
     newBid.createdAt = new Date();
 
-    console.log(newBid);
+    // console.log(newBid);
 
     // create bids in db
     fetch("https://skilnado-server.vercel.app/bids", {
@@ -32,6 +30,7 @@ const BidForm = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         if (data.insertedId) {
           Swal.fire({
             position: "top-end",
@@ -45,26 +44,23 @@ const BidForm = () => {
           setBids(newBids);
           form.reset();
           navigate(`/browseTasks/${currentProjectId}`);
+        } else {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "You Already Bids!",
+            footer: "Browse Another Task",
+          });
         }
       });
   };
 
   return (
-    <div className="mt-30 md:mt-20 mb-10 text-black">
-      <Helmet>
-        <title>Skilnado || Bid Form</title>
-      </Helmet>
-      {/* Content */}
-      <div className="text-center mb-10">
-        <h1 className="py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
-          Bid Form
-        </h1>
-      </div>
-
+    <div className="text-black">
       {/* Form */}
       <form
         onSubmit={handleBidForm}
-        className="bg-secondary *:border-0 rounded-lg"
+        className="bg-secondary *:border-0 rounded-bl-lg rounded-br-lg"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 *:border-0">
           <fieldset className="fieldset border-base-300 rounded-box w-full border p-4">
@@ -102,16 +98,10 @@ const BidForm = () => {
           <input
             type="submit"
             className="input w-full font text-white bg-primary text-xl cursor-pointer"
-            value="Bid"
+            value="Bid Now"
           />
         </fieldset>
       </form>
-      <Link className="font text-xl" to="/browseTasks">
-        <button className="border rounded-sm px-3 bg-primary text-white flex gap-2 items-center mt-6 cursor-pointer">
-          <IoReturnDownBack className="text-4xl font-bold" />
-          <span className="font-bold">Back</span>
-        </button>
-      </Link>
     </div>
   );
 };
