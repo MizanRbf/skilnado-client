@@ -27,7 +27,7 @@ export default function Testimonials() {
   // console.log(testimonials);
 
   return (
-    <div className="w-full py-10 text-black">
+    <div className="w-full pt-4 text-black">
       <Swiper
         effect={"coverflow"}
         grabCursor={true}
@@ -51,7 +51,7 @@ export default function Testimonials() {
         {testimonials.map((testimonial) => (
           <SwiperSlide
             key={testimonial.id}
-            className="w-[300px] swiper-slide-custom mb-16"
+            className="w-[300px] swiper-slide-custom mb-20 md:mb-16"
           >
             <div className="testimonial-box p-6 border border-slate-200 shadow-lg text-center relative mb-30 bg-secondary rounded-br-[50px]">
               <p className="text-left text-white ml-10">Client</p>

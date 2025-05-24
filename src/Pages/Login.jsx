@@ -90,7 +90,7 @@ const Login = () => {
         <Helmet>
           <title>Skilnado || Login</title>
         </Helmet>
-        <div className="card-body">
+        <div className="card-body mb-20">
           <div className="flex justify-center">
             <img className="w-50 mb-3" src="/assets/logo.png" alt="" />
           </div>

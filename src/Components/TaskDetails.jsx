@@ -16,20 +16,21 @@ const TaskDetails = () => {
   }, []);
 
   return (
-    <div className="max-w-[1200px] mx-auto my-20 px-10">
-      <h1 className="text-center text-primary">
-        You bid for {bids.length} opportunities.
-      </h1>
-      <Link className="font text-xl" to="/browseTasks">
-        <button className="border rounded-sm px-3 mb-4 bg-primary text-white flex gap-2 items-center mt-6 cursor-pointer">
-          <IoReturnDownBack className="text-4xl font-bold" />
-          <span className="font-bold">Browse Tasks</span>
-        </button>
-      </Link>
-      <div className="bg-base-300 rounded-sm">
+    <div className="max-w-[1200px] mx-auto mt-30 md:mt-20 mb-10">
+      <div className="bg-secondary py-4 rounded-sm mb-10">
+        <p className="text-center text-white text-xl md:text-4xl font-bold">
+          You bid for{" "}
+          <span className="bg-white text-secondary p-1 rounded-full mx-2 md:mx-4 ">
+            {bids.length}
+          </span>{" "}
+          opportunities.
+        </p>
+      </div>
+
+      <div className="bg-secondary text-white rounded-sm">
         <div className="flex items-center justify-between p-6">
           <div>
-            <h2>Task Title: {taskTitle}</h2>
+            <h2> {taskTitle}</h2>
           </div>
           <div>
             <p>
@@ -55,6 +56,12 @@ const TaskDetails = () => {
           </button>
         </Link>
       </div>
+      <Link className="font text-xl" to="/browseTasks">
+        <button className="border rounded-sm px-3 mb-4 bg-secondary text-white flex gap-2 items-center mt-6 cursor-pointer">
+          <IoReturnDownBack className="text-4xl font-bold" />
+          <span className="font-bold">Browse Tasks</span>
+        </button>
+      </Link>
     </div>
   );
 };

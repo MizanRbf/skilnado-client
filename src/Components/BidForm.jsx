@@ -56,20 +56,15 @@ const BidForm = () => {
       </Helmet>
       {/* Content */}
       <div className="text-center mb-10">
-        <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+        <h1 className="py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
           Bid Form
         </h1>
       </div>
-      <Link className="font text-xl" to="/browseTasks">
-        <button className="border rounded-sm px-3 mb-4 bg-primary text-white flex gap-2 items-center mt-6 cursor-pointer">
-          <IoReturnDownBack className="text-4xl font-bold" />
-          <span className="font-bold">Back</span>
-        </button>
-      </Link>
+
       {/* Form */}
       <form
         onSubmit={handleBidForm}
-        className="bg-secondary p-4 *:border-0 rounded-lg"
+        className="bg-secondary *:border-0 rounded-lg"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 *:border-0">
           <fieldset className="fieldset border-base-300 rounded-box w-full border p-4">
@@ -111,6 +106,12 @@ const BidForm = () => {
           />
         </fieldset>
       </form>
+      <Link className="font text-xl" to="/browseTasks">
+        <button className="border rounded-sm px-3 bg-primary text-white flex gap-2 items-center mt-6 cursor-pointer">
+          <IoReturnDownBack className="text-4xl font-bold" />
+          <span className="font-bold">Back</span>
+        </button>
+      </Link>
     </div>
   );
 };

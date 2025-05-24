@@ -79,7 +79,7 @@ const MyPostedTasks = () => {
   };
 
   return (
-    <div className="max-w-[1200px] mx-auto px-4 mt-30 md:mt-10">
+    <div className="max-w-[1200px] mx-auto mt-30 md:mt-20 mb-6">
       <Helmet>
         <title>Skilnado || MyTask</title>
       </Helmet>
@@ -155,7 +155,7 @@ const MyPostedTasks = () => {
             </tbody>
           </table>
           <Link className="font text-xl" to="/addTask">
-            <button className="border rounded-sm px-3 mb-4 bg-primary text-white flex gap-2 items-center mt-6 cursor-pointer">
+            <button className="border rounded-sm px-3 bg-primary text-white flex gap-2 items-center mt-6 mb-4 cursor-pointer">
               <IoReturnDownBack className="text-4xl font-bold" />
               <span className="font-bold"> Add Task</span>
             </button>

@@ -9,8 +9,8 @@ const BrowseTasks = () => {
   const [tasks, setTasks] = useState(initialTasks);
 
   return (
-    <div className="mt-30 md:mt-10 max-w-[1200px] mx-auto px- text-black">
-      <div className="my-10">
+    <div className="mt-30 md:mt-20  max-w-[1200px] mx-auto px- text-black mb-10">
+      <div className="">
         <div className="text-center">
           <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
             All Tasks
@@ -27,7 +27,7 @@ const BrowseTasks = () => {
           ))}
         </div>
         <Link className="font text-xl" to="/addTask">
-          <button className="border rounded-sm px-3 mb-4 bg-secondary text-white flex gap-2 items-center mt-6 cursor-pointer">
+          <button className="border rounded-sm px-3 bg-secondary text-white flex gap-2 items-center mt-6 cursor-pointer">
             <IoReturnDownBack className="text-4xl font-bold" />
             <span className="font-bold"> Add Task</span>
           </button>

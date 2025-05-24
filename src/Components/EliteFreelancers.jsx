@@ -9,7 +9,6 @@ const EliteFreelancers = () => {
       .then((res) => res.json())
       .then((data) => setEliteFreelancers(data));
   }, []);
-  console.log(eliteFreelancers);
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -23,7 +22,7 @@ const EliteFreelancers = () => {
             />
           </div>
 
-          <div className="px-6 space-y-1 py-3 text-black bg-secondary text-white rounded-bl-lg rounded-br-lg">
+          <div className="px-6 space-y-1 py-3 bg-secondary text-white rounded-bl-lg rounded-br-lg">
             <h2>{freelancer.name}</h2>
             <p>{freelancer.title}</p>
             <div>
