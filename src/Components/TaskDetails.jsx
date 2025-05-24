@@ -53,10 +53,10 @@ const TaskDetails = () => {
           <div className=" p-6">
             {/* Title */}
             <div>
-              <h1 className="text-center"> {taskTitle}</h1>
+              <h1 className="text-center mb-4"> {taskTitle}</h1>
             </div>
             {/* Details */}
-            <div className="flex justify-between mx-10">
+            <div className="flex justify-between gap-2 *:text-sm">
               {/* Task Related */}
               <div>
                 <p>
