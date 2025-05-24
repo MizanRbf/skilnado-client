@@ -11,7 +11,7 @@ const AuthLayout = () => {
       </header>
 
       {/* Outlet */}
-      <main className="w-11/12 mx-auto min-h-[calc(100vh-288px)]">
+      <main className="w-11/12 mt-30 mx-auto min-h-[calc(100vh-288px)]">
         <Outlet></Outlet>
       </main>
 

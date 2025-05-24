@@ -86,11 +86,11 @@ const Login = () => {
   return (
     <>
       <div className="bg-primary absolute top-[72px] right-0 left-0 bottom-[40%] md:bottom-[50%]"></div>
-      <div className="card bg-base-100 w-full max-w-xs md:max-w-sm mx-auto mt-30 md:mt-20 shrink-0 shadow-2xl mb-20 border border-slate-200">
+      <div className="card bg-base-100 w-full max-w-xs md:max-w-sm mx-auto mt-30 md:mt-20 shrink-0 shadow-2xl mb-20  border border-slate-200">
         <Helmet>
           <title>Skilnado || Login</title>
         </Helmet>
-        <div className="card-body mb-20">
+        <div className="card-body">
           <div className="flex justify-center">
             <img className="w-50 mb-3" src="/assets/logo.png" alt="" />
           </div>

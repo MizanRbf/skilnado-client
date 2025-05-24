@@ -79,7 +79,7 @@ const MyPostedTasks = () => {
   };
 
   return (
-    <div className="max-w-[1200px] mx-auto mt-30 md:mt-20 mb-6">
+    <div className="max-w-[1200px] mx-auto mt-40 mb-6">
       <Helmet>
         <title>Skilnado || MyTasks</title>
       </Helmet>

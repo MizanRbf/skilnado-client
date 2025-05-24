@@ -21,7 +21,7 @@ const TaskDetails = () => {
   }, [user?.uid]);
 
   return (
-    <div className="max-w-[1200px] mx-auto mt-30 md:mt-20 mb-10">
+    <div className="max-w-[1200px] mx-auto mt-40 mb-10">
       <Helmet>
         <title>Skilnado || Task Details</title>
       </Helmet>

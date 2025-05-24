@@ -10,7 +10,7 @@ const BrowseTasks = () => {
   const [tasks, setTasks] = useState(initialTasks);
 
   return (
-    <div className="mt-30 md:mt-20  max-w-[1200px] mx-auto px- text-black mb-10">
+    <div className="mt-40  max-w-[1200px] mx-auto px- text-black mb-10">
       <Helmet>
         <title>Skilnado || BrowseTasks</title>
       </Helmet>

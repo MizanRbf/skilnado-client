@@ -44,7 +44,7 @@ const AddTask = () => {
   };
 
   return (
-    <div className="mt-30 md:mt-20 mb-10 text-black">
+    <div className="mt-30 mb-10 text-black">
       <Helmet>
         <title>Skilnado || Add Task</title>
       </Helmet>
