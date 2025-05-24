@@ -6,7 +6,6 @@ import { useLoaderData } from "react-router";
 import FeaturedCard from "../Components/FeaturedCard";
 import Testimonials from "../Components/Testimonials";
 import EliteFreelancers from "../Components/EliteFreelancers";
-import DarkMode from "../Components/DarkMode";
 
 const HomePage = () => {
   const featuredTasks = useLoaderData();
@@ -20,9 +19,6 @@ const HomePage = () => {
       <div>
         <Banner></Banner>
       </div>
-
-      {/* Theme Controller */}
-      <DarkMode></DarkMode>
       {/* Featured Tasks Section */}
       <div className="mt-20">
         <div>

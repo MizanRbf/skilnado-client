@@ -4,6 +4,7 @@ import { AuthContext } from "../Provider/AuthContext";
 import { Tooltip } from "react-tooltip";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import DarkMode from "./DarkMode";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -74,6 +75,9 @@ const Header = () => {
 
         {/* Login Info */}
         <div className="flex gap-4 items-center">
+          <div className="bg-white rounded-4xl p-1 rounded-">
+            <DarkMode></DarkMode>
+          </div>
           {/* User Info */}
           <div>
             {user && (
@@ -99,14 +103,14 @@ const Header = () => {
               <button
                 onClick={handleSignOut}
                 to=""
-                className="btn btn-primary px-6 md:px-8 text-white"
+                className="bg-primary rounded-sm text-sm md:text-lg py-1 md:py-2 px-2 md:px-6 font-bold text-white"
               >
                 Logout
               </button>
             ) : (
               <Link
                 to="/auth/login"
-                className="text-white btn btn-primary px-6 md:px-8"
+                className="bg-primary rounded-sm text-sm md:text-lg py-1 md:py-2 px-2 md:px-6 font-bold text-white"
               >
                 Login
               </Link>
