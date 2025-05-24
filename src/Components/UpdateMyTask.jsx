@@ -17,25 +17,37 @@ const UpdateMyTask = () => {
     console.log(updatedMyTasks);
 
     // Update My Tasks
-    fetch(`https://skilnado-server.vercel.app/tasks/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updatedMyTasks),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.modifiedCount) {
-          Swal.fire({
-            title: "Updated Successfully!",
-            icon: "success",
-            draggable: true,
+    Swal.fire({
+      title: "Do you want to save the changes?",
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Save",
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(`https://skilnado-server.vercel.app/tasks/${_id}`, {
+          method: "PUT",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(updatedMyTasks),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.modifiedCount) {
+              Swal.fire({
+                title: "Updated Successfully!",
+                icon: "success",
+                draggable: true,
+              });
+              console.log("after updated", data);
+              navigate("/myPostedTasks");
+            }
           });
-          console.log("after updated", data);
-          navigate("/myPostedTasks");
-        }
-      });
+      } else if (result.isDenied) {
+        Swal.fire("Changes are not saved", "", "info");
+      }
+    });
   };
 
   return (
