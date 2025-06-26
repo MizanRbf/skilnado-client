@@ -1,11 +1,13 @@
-import React, { useState } from "react";
+import React, { use, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthContext";
 
 const AddTask = () => {
   const navigate = useNavigate();
   const [tasks, setTasks] = useState([]);
+  const { user } = use(AuthContext);
 
   // Handle Add Tasks
   const handleAddTask = (e) => {
@@ -103,6 +105,8 @@ const AddTask = () => {
                 name="email"
                 className="input w-full"
                 placeholder="Enter Your Email"
+                defaultValue={user?.email}
+                readOnly
               />
             </fieldset>
             <fieldset className="fieldset  border-base-300 rounded-box w-full p-4">
@@ -112,6 +116,8 @@ const AddTask = () => {
                 name="name"
                 className="input w-full"
                 placeholder="Enter Your Name"
+                defaultValue={user?.displayName}
+                readOnlys
               />
             </fieldset>
           </div>

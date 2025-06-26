@@ -14,6 +14,7 @@ import Register from "../Layouts/Auth/Register";
 import ErrorPage from "../Pages/Error/ErrorPage";
 import Loader from "../shared/Loader";
 import PrivateRoute from "../Provider/PrivateRoute";
+import Dashboard from "../Pages/Dashboard/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -75,6 +76,13 @@ export const router = createBrowserRouter([
         Component: BidsDetails,
       },
     ],
+  },
+  // Dashboard
+  {
+    path: "/dashboard",
+    loader: () => fetch("https://skilnado-server.vercel.app/tasks"),
+    hydrateFallbackElement: <Loader></Loader>,
+    element: <Dashboard></Dashboard>,
   },
   // AuthLayout
   {

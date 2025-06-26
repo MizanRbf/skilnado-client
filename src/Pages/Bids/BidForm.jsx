@@ -7,7 +7,6 @@ const BidForm = () => {
   const navigate = useNavigate();
   const { id: currentProjectId } = useParams();
   const { user, bids, setBids } = useContext(AuthContext);
-
   // Handle Bid Counts
   const handleBidForm = (e) => {
     e.preventDefault();
@@ -17,8 +16,6 @@ const BidForm = () => {
     newBid.userId = user?.uid;
     newBid.projectId = currentProjectId;
     newBid.createdAt = new Date();
-
-    // console.log(newBid);
 
     // create bids in db
     fetch("https://skilnado-server.vercel.app/bids", {

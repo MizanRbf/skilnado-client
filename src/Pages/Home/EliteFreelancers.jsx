@@ -47,8 +47,8 @@ const EliteFreelancers = () => {
               </p>
               <div className="flex gap-3">
                 <p className="font-bold">Skills:</p>
-                {freelancer.skills.map((skill) => (
-                  <div>
+                {freelancer.skills.map((skill, index) => (
+                  <div key={index}>
                     <p className="bg-amber-300 text-black px-2 rounded-xl text-xs">
                       {skill}
                     </p>

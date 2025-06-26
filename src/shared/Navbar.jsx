@@ -5,6 +5,7 @@ import { Tooltip } from "react-tooltip";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import DarkMode from "./DarkMode";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -36,7 +37,7 @@ const Navbar = () => {
               <GiHamburgerMenu className="text-primary cursor-pointer lg:hidden text-2xl" />
             )}
           </span>
-          <img className="w-30 md:w-50" src="/assets/logo.png" alt="" />
+          <Logo></Logo>
           <ul
             className={`top-13 left-0 absolute p-1 shadow bg-[#0e2b01] border-2 border-[#3bb90565] *:hover:bg-white *:hover:text-black *:hover:duration-300 rounded-md text-lg font-bold text-white space-y-2 z-9 ${
               !open ? "hidden" : "block"
@@ -52,7 +53,7 @@ const Navbar = () => {
               <Link to="/browseTasks">Browse Tasks</Link>
             </li>
             <li>
-              <Link to="/myPostedTasks">My Posted Tasks</Link>
+              <Link to="/dashboard">Dashboard</Link>
             </li>
           </ul>
         </div>
@@ -69,7 +70,7 @@ const Navbar = () => {
             <NavLink to="/browseTasks">Browse Tasks</NavLink>
           </li>
           <li>
-            <NavLink to="/myPostedTasks">My Posted Tasks</NavLink>
+            <NavLink to="/dashboard">Dashboard</NavLink>
           </li>
         </ul>
 

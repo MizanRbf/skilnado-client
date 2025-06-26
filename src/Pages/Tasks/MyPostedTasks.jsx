@@ -10,8 +10,8 @@ import Deadline from "../../shared/Deadline";
 
 const MyPostedTasks = () => {
   const { user } = useContext(AuthContext);
-  const [bids, setBids] = useState([]);
   const [myTasks, setMyTasks] = useState([]);
+  const [bids, setBids] = useState([]);
   const [bidsOfThis, setBidsOfThis] = useState([]);
   const navigate = useNavigate();
 
@@ -27,7 +27,7 @@ const MyPostedTasks = () => {
         .then((data) => setBids(data))
         .catch((error) => console.log(error.message));
     }
-  }, [user]);
+  }, [user, setMyTasks]);
 
   // Handle Delete
   const handleDelete = (id) => {
