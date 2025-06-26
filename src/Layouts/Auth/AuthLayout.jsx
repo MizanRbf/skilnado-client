@@ -1,24 +1,18 @@
 import React from "react";
 import { Outlet } from "react-router";
-import Footer from "../../shared/Footer";
 import Navbar from "../../shared/Navbar";
 
 const AuthLayout = () => {
   return (
     <div>
-      <header className="w-11/12 mx-auto">
+      <header>
         <Navbar></Navbar>
       </header>
 
       {/* Outlet */}
-      <main className="w-11/12 mt-30 mx-auto min-h-[calc(100vh-288px)]">
+      <main>
         <Outlet></Outlet>
       </main>
-
-      {/* Footer */}
-      <footer className="text-center">
-        <Footer></Footer>
-      </footer>
     </div>
   );
 };

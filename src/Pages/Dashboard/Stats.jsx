@@ -1,6 +1,5 @@
 import CountUp from "react-countup";
 import { motion } from "motion/react";
-import { AuthContext } from "../../Provider/AuthContext";
 
 const Section = ({ children }) => (
   <motion.div

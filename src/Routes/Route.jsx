@@ -15,6 +15,7 @@ import ErrorPage from "../Pages/Error/ErrorPage";
 import Loader from "../shared/Loader";
 import PrivateRoute from "../Provider/PrivateRoute";
 import Dashboard from "../Pages/Dashboard/Dashboard";
+import Blogs from "../Pages/Blogs/Blogs";
 
 export const router = createBrowserRouter([
   {
@@ -76,6 +77,14 @@ export const router = createBrowserRouter([
         Component: BidsDetails,
       },
     ],
+  },
+
+  // Blogs
+  {
+    path: "/blogs",
+    hydrateFallbackElement: <Loader></Loader>,
+    loader: () => fetch("/blogData.json"),
+    element: <Blogs></Blogs>,
   },
   // Dashboard
   {

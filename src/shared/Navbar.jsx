@@ -6,6 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import DarkMode from "./DarkMode";
 import Logo from "./Logo";
+import { MdMenu } from "react-icons/md";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -28,34 +29,80 @@ const Navbar = () => {
     <div className="bg-[#131b00] text-black border-2 border-b-[#3bb90565] border-x-0 border-t-0 py-4 fixed top-0 right-0 left-0 z-9">
       <div className="flex justify-between items-center max-w-[1800px] mx-auto px-4">
         {/* Logo */}
-        <div className="flex items-center gap-3 relative">
-          {/* Responsive Menubar */}
-          <span onClick={() => setOpen(!open)}>
-            {open ? (
-              <RxCross2 className="text-primary cursor-pointer  lg:hidden text-2xl" />
-            ) : (
-              <GiHamburgerMenu className="text-primary cursor-pointer lg:hidden text-2xl" />
-            )}
-          </span>
+        <div className="flex items-center gap-3">
           <Logo></Logo>
-          <ul
-            className={`top-13 left-0 absolute p-1 shadow bg-[#0e2b01] border-2 border-[#3bb90565] *:hover:bg-white *:hover:text-black *:hover:duration-300 rounded-md text-lg font-bold text-white space-y-2 z-9 ${
-              !open ? "hidden" : "block"
+          {/* Menubar for Small Device */}
+          <nav
+            className={`top-18 lg:hidden right-0 left-0 absolute py-6 shadow bg-[rgba(0,0,0,0.81)]  text-lg font-bold text-white transform transition-all ease-in-out duration-300 z-50 ${
+              open
+                ? "opacity-100 translate-y-2 visible"
+                : "opacity-0 -translate-y-5 invisible"
             }`}
           >
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/addTask">Add Task</Link>
-            </li>
-            <li>
-              <Link to="/browseTasks">Browse Tasks</Link>
-            </li>
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-          </ul>
+            <ul className="px-10 *:hover:bg-white *:hover:text-black  *:hover:duration-300 space-y-2">
+              <li>
+                <Link to="/">
+                  <button
+                    className="w-full text-left cursor-pointer"
+                    onClick={() => setOpen(false)}
+                  >
+                    Home
+                  </button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/browseAllTasks">
+                  <button
+                    className="w-full text-left cursor-pointer"
+                    onClick={() => setOpen(false)}
+                  >
+                    Browse All Tasks
+                  </button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/dashboard">
+                  <button
+                    className="w-full text-left cursor-pointer"
+                    onClick={() => setOpen(false)}
+                  >
+                    Dashboard
+                  </button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/blogs">
+                  <button
+                    className="w-full text-left cursor-pointer"
+                    onClick={() => setOpen(false)}
+                  >
+                    Blogs
+                  </button>
+                </Link>
+              </li>
+            </ul>
+            {/* Login Button */}
+
+            <div className="px-10">
+              {user ? (
+                <button
+                  onClick={handleSignOut}
+                  className="cursor-pointer py-2 mt-2 bg-white rounded-sm text-primary shadow-2xl w-full hover:bg-[rgb(248,237,208)]"
+                >
+                  Logout
+                </button>
+              ) : (
+                <Link to="/auth/login">
+                  <button
+                    className="cursor-pointer py-2 mt-2 bg-white rounded-sm
+                    text-primary shadow-2xl w-full"
+                  >
+                    Login
+                  </button>
+                </Link>
+              )}
+            </div>
+          </nav>
         </div>
 
         {/* Menubar for Large Device */}
@@ -64,13 +111,13 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/addTask">Add Task</NavLink>
-          </li>
-          <li>
-            <NavLink to="/browseTasks">Browse Tasks</NavLink>
+            <NavLink to="/browseTasks">Browse All Tasks</NavLink>
           </li>
           <li>
             <NavLink to="/dashboard">Dashboard</NavLink>
+          </li>
+          <li>
+            <NavLink to="/blogs">Blogs</NavLink>
           </li>
         </ul>
 
@@ -97,13 +144,24 @@ const Navbar = () => {
               </a>
             )}
           </div>
+
+          {/* Responsive Icon */}
+          <div className="py-1 px-3 rounded-sm lg:hidden bg-slate-200 shadow-2xl">
+            <span onClick={() => setOpen(!open)}>
+              {open ? (
+                <RxCross2 className="cursor-pointer   text-2xl" />
+              ) : (
+                <MdMenu className="cursor-pointer text-2xl" />
+              )}
+            </span>
+          </div>
+
           {/* Log Button */}
-          <div>
+          <div className="hidden lg:block">
             {user ? (
               <button
                 onClick={handleSignOut}
-                to=""
-                className="bg-primary rounded-sm text-sm md:text-lg py-1 md:py-2 px-2 md:px-6 font-bold text-white"
+                className="cursor-pointer bg-primary rounded-sm text-sm md:text-lg py-1 md:py-2 px-2 md:px-6 font-bold text-white"
               >
                 Logout
               </button>

@@ -5,6 +5,8 @@ import { useLoaderData } from "react-router";
 import FeaturedCard from "./FeaturedCard";
 import EliteFreelancers from "./EliteFreelancers";
 import Testimonials from "./Testimonials";
+import NewsLetter from "./Newsletter/Newsletter";
+import Slider from "./NewsLetter/Slider";
 
 const HomePage = () => {
   const featuredTasks = useLoaderData();
@@ -16,7 +18,7 @@ const HomePage = () => {
       </Helmet>
       {/* Slider */}
       <div>
-        <Banner></Banner>
+        <Slider></Slider>
       </div>
       {/* Featured Tasks Section */}
       <div className="mt-20">
@@ -55,6 +57,17 @@ const HomePage = () => {
           </h1>
 
           <Testimonials></Testimonials>
+        </div>
+      </div>
+
+      {/* NewsLetter */}
+      <div className="mt-30 mb-20">
+        <div className=" mb-6">
+          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+            NewsLetter
+          </h1>
+
+          <NewsLetter></NewsLetter>
         </div>
       </div>
     </div>

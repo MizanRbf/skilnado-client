@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { AuthContext } from "../../Provider/AuthContext";
-import Logo from "../../shared/Logo";
 import { Link, useLoaderData } from "react-router";
 import { IoHome } from "react-icons/io5";
 import { SiGoogletasks, SiTask } from "react-icons/si";
