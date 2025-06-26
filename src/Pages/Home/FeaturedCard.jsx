@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router";
-import Deadline from "./Deadline";
+import Deadline from "../../shared/Deadline";
 
 const FeaturedCard = ({ featuredTask }) => {
   const { _id, taskTitle, category, budget, email, name } = featuredTask;

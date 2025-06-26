@@ -6,7 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import DarkMode from "./DarkMode";
 
-const Header = () => {
+const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <div className="bg-[#131b00] text-black border-2 border-b-[#3bb90565] border-x-0 border-t-0 py-4 fixed top-0 right-0 left-0 z-9">
-      <div className="flex justify-between items-center max-w-[1200px] mx-auto px-4">
+      <div className="flex justify-between items-center max-w-[1800px] mx-auto px-4">
         {/* Logo */}
         <div className="flex items-center gap-3 relative">
           {/* Responsive Menubar */}
@@ -121,4 +121,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Navbar;

@@ -1,10 +1,11 @@
 import { useContext, useEffect } from "react";
 import { Link, useLoaderData } from "react-router";
-import { AuthContext } from "../Provider/AuthContext";
+import { AuthContext } from "../../Provider/AuthContext";
 import { IoReturnDownBack } from "react-icons/io5";
 import { Helmet } from "react-helmet-async";
-import BidForm from "./BidForm";
-import Deadline from "./Deadline";
+
+import BidForm from "../Bids/BidForm";
+import Deadline from "../../shared/Deadline";
 
 const TaskDetails = () => {
   const { bids, setBids, user } = useContext(AuthContext);

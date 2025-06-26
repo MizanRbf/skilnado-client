@@ -1,19 +1,19 @@
 import { createBrowserRouter } from "react-router";
-import RootLayout from "../Layouts/RootLayout";
-import ErrorPage from "../Pages/ErrorPage";
-import AuthLayout from "../Layouts/AuthLayout";
-import Login from "../Pages/Login";
-import Register from "../Pages/Register";
-import HomePage from "../Pages/HomePage";
-import AddTask from "../Pages/AddTask";
-import BrowseTasks from "../Pages/BrowseTasks";
-import MyPostedTasks from "../Pages/MyPostedTasks";
-import TaskDetails from "../Components/TaskDetails";
-import Loader from "../Components/Loader";
-import UpdateMyTask from "../Components/UpdateMyTask";
-import BidForm from "../Components/BidForm";
+
+import RootLayout from "../Layouts/RootLayouts/RootLayout";
+import HomePage from "../Pages/Home/HomePage";
+import AddTask from "../Pages/Tasks/AddTask";
+import BrowseTasks from "../Pages/Tasks/BrowseTasks";
+import TaskDetails from "../Pages/Tasks/TaskDetails";
+import MyPostedTasks from "../Pages/Tasks/MyPostedTasks";
+import UpdateMyTask from "../Pages/Tasks/UpdateMyTask";
+import BidsDetails from "../Pages/Bids/BidsDetails";
+import AuthLayout from "../Layouts/Auth/AuthLayout";
+import Login from "../Layouts/Auth/Login";
+import Register from "../Layouts/Auth/Register";
+import ErrorPage from "../Pages/Error/ErrorPage";
+import Loader from "../shared/Loader";
 import PrivateRoute from "../Provider/PrivateRoute";
-import BidsDetails from "../Components/BidsDetails";
 
 export const router = createBrowserRouter([
   {

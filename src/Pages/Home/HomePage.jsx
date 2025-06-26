@@ -1,11 +1,10 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import Header from "../Components/Header";
-import Banner from "../Components/Banner";
+import Banner from "./Banner";
 import { useLoaderData } from "react-router";
-import FeaturedCard from "../Components/FeaturedCard";
-import Testimonials from "../Components/Testimonials";
-import EliteFreelancers from "../Components/EliteFreelancers";
+import FeaturedCard from "./FeaturedCard";
+import EliteFreelancers from "./EliteFreelancers";
+import Testimonials from "./Testimonials";
 
 const HomePage = () => {
   const featuredTasks = useLoaderData();

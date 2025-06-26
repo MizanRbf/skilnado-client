@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import { AuthContext } from "../Provider/AuthContext";
+import { AuthContext } from "../../Provider/AuthContext";
 import { Link, useNavigate } from "react-router";
 import { MdDelete, MdEdit } from "react-icons/md";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
-import Deadline from "../Components/Deadline";
 import { IoReturnDownBack } from "react-icons/io5";
+import Deadline from "../../shared/Deadline";
 
 const MyPostedTasks = () => {
   const { user } = useContext(AuthContext);

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link, useLoaderData } from "react-router";
-import TaskCard from "../Components/TaskCard";
+
 import { IoReturnDownBack } from "react-icons/io5";
 import { Helmet } from "react-helmet-async";
+import TaskCard from "./TaskCard";
 
 const BrowseTasks = () => {
   const initialTasks = useLoaderData();

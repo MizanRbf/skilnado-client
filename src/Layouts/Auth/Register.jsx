@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router";
-import { AuthContext } from "../Provider/AuthContext";
+import { AuthContext } from "../../Provider/AuthContext";
 import Swal from "sweetalert2";
 import { FaEye } from "react-icons/fa";
 import { LuEyeClosed } from "react-icons/lu";
