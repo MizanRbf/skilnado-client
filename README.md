@@ -32,15 +32,26 @@ Modern build tool ensures quick dev experience and optimized builds.
 ## 🛠️ NPM Packages
 
 This project uses the following major NPM packages:
-- Frontend: React 19, React DOM
-- Routing: React Router v7
-- UI Framework: TailwindCSS 4, DaisyUI
-- Authentication: Firebase v11
-- Tooltips: React Tooltip
-- Icons: React Icons
-- Swiper Carousel: SwiperJS
-- Alerts: SweetAlert2
-- Dynamic title: Helmet
+- @tailwindcss/vite - ^4.1.7  
+- emailjs-com - ^3.2.0  
+- firebase - ^11.7.3  
+- motion - ^12.19.1  
+- react - ^19.1.0  
+- react-countup - ^6.5.3  
+- react-datepicker - ^8.3.0  
+- react-dom - ^19.1.0  
+- react-helmet-async - ^2.0.5  
+- react-icons - ^5.5.0  
+- react-is - ^19.1.0  
+- react-responsive-carousel - ^3.2.23  
+- react-router - ^7.6.0  
+- react-simple-typewriter - ^5.0.1  
+- react-tooltip - ^5.28.1  
+- recharts - ^3.0.0  
+- sweetalert2 - ^11.21.2  
+- swiper - ^11.2.7  
+- tailwindcss - ^4.1.7   
+
 
 ---
 
