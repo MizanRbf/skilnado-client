@@ -42,10 +42,16 @@ const Dashboard = () => {
       })
       .catch();
   };
+  const [eliteFreelancers, setEliteFreelancers] = useState([]);
+  useEffect(() => {
+    fetch("/Freelancers.json")
+      .then((res) => res.json())
+      .then((data) => setEliteFreelancers(data));
+  }, []);
 
   return (
-    <div className="px-10 pt-10 lg:pt-0 bg-slate-100">
-      <div className="max-w-[1800px] mx-auto md:mt-10 mb-20 border border-gray-200 rounded-lg shadow-xl flex flex-col md:flex-row gap-6">
+    <div className="px-10 pt-10 lg:pt-0">
+      <div className="max-w-[1500px] mx-auto md:mt-10 mb-20 border border-gray-200 rounded-lg shadow-xl flex flex-col md:flex-row gap-6 bg-slate-100">
         <Helmet>
           <title>Skilnado || Dashboard</title>
         </Helmet>
@@ -126,16 +132,21 @@ const Dashboard = () => {
           </div>
         </div>
         {/* Right Section */}
-        <div>
+        <div className="mx-auto w-full">
           <div className="md:block justify-center hidden pt-4">
-            <h1 className="text-center border inline-block px-4 bg-secondary text-white rounded-sm">
+            <h1 className="text-center border inline-block px-4 bg-secondary text-white rounded-sm mb-8">
               User Dashboard
             </h1>
           </div>
 
           <div className="">
             {/* Stats */}
-            <Stats myTasks={myTasks} bids={bids} allTasks={allTasks}></Stats>
+            <Stats
+              myTasks={myTasks}
+              bids={bids}
+              allTasks={allTasks}
+              eliteFreelancers={eliteFreelancers}
+            ></Stats>
             <Chart myTasks={myTasks}></Chart>
             <div
               className={`bg-slate-100 rounded-lg m-4 mb-20 py-30 ${

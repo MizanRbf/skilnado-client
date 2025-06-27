@@ -13,41 +13,42 @@ const Section = ({ children }) => (
   </motion.div>
 );
 
-const Stats = ({ myTasks, bids, allTasks }) => {
+const Stats = ({ myTasks, bids, allTasks, eliteFreelancers }) => {
   return (
     <Section>
-      <div className="p-6 mt-10">
-        <div className="p-4 grid justify-center grid-cols-2 text-center lg:grid-cols-4">
+      <div className="">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4 w-full">
           {/* All tasks */}
-          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4 bg-white">
-            <p className="text-4xl font-bold leading-none ">
-              <CountUp end={allTasks.length} duration={20} />+
+          <div className="w-full bg-white shadow-md rounded-lg p-6 flex flex-col items-center justify-center min-h-[180px]">
+            <p className="text-4xl font-bold leading-none text-primary">
+              <CountUp end={allTasks.length} duration={2} />+
             </p>
-            <p className="text-sm sm:text-base">All tasks</p>
+            <p className="text-sm md:text-base text-center mt-2">All Tasks</p>
           </div>
-
           {/* My Posted Tasks */}
-          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4 bg-white">
-            <p className="text-4xl font-bold leading-none ">
-              <CountUp end={myTasks.length} duration={20} />+
+          <div className="w-full bg-white shadow-md rounded-lg p-6 flex flex-col items-center justify-center min-h-[180px]">
+            <p className="text-4xl font-bold leading-none text-primary">
+              <CountUp end={myTasks.length} duration={2} />+
             </p>
-            <p className="text-sm sm:text-base">My Posted Tasks</p>
+            <p className="text-sm md:text-base text-center mt-2">
+              My Posted Tasks
+            </p>
           </div>
-
           {/* Total Bids */}
-          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4 bg-white">
-            <p className="text-4xl font-bold leading-none ">
-              <CountUp end={bids.length} duration={20} />+
+          <div className="w-full bg-white shadow-md rounded-lg p-6 flex flex-col items-center justify-center min-h-[180px]">
+            <p className="text-4xl font-bold leading-none text-primary">
+              <CountUp end={bids.length} duration={2} />+
             </p>
-            <p className="text-sm sm:text-base">Total Bids</p>
+            <p className="text-sm md:text-base text-center mt-2">Total Bids</p>
           </div>
-
           {/* Total Users */}
-          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4 bg-white">
-            <p className="text-4xl font-bold leading-none ">
-              <CountUp end="44" duration={20} />+
+          <div className="w-full bg-white shadow-md rounded-lg p-6 flex flex-col items-center justify-center min-h-[180px]">
+            <p className="text-4xl font-bold leading-none text-primary">
+              <CountUp end={eliteFreelancers.length} duration={2} />+
             </p>
-            <p className="text-sm sm:text-base">Total Users</p>
+            <p className="text-sm md:text-base text-center mt-2">
+              Elite Freelancers
+            </p>
           </div>
         </div>
       </div>

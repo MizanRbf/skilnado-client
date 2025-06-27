@@ -1,13 +1,21 @@
-import React, { useRef } from "react";
-import { FaFacebook, FaLinkedin, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
+import React, { use, useRef } from "react";
+import {
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+  FaPhoneAlt,
+  FaWhatsapp,
+} from "react-icons/fa";
 import { FaLocationDot, FaXTwitter } from "react-icons/fa6";
 import { IoMail } from "react-icons/io5";
 import { Link, NavLink } from "react-router";
 import Swal from "sweetalert2";
 
 import emailjs from "emailjs-com";
+import { AuthContext } from "../Provider/AuthContext";
 
 const Footer = () => {
+  const { user } = use(AuthContext);
   const form = useRef();
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -63,17 +71,24 @@ const Footer = () => {
           <Link to="/" className="link link-hover">
             Home
           </Link>
-          <Link to="/addTask" className="link link-hover">
-            Add Task
-          </Link>
+          {user && (
+            <Link to="/addTask" className="link link-hover">
+              Add Task
+            </Link>
+          )}
           <Link to="/browseTasks" className="link link-hover">
             Browse Tasks
           </Link>
-          <Link to="/myPostedTasks" className="link link-hover">
-            My Posted Tasks
+          {user && (
+            <Link to="/myPostedTasks" className="link link-hover">
+              My Posted Tasks
+            </Link>
+          )}
+          <Link to="/blogs" className="link link-hover">
+            Blogs
           </Link>
         </nav>
-        <nav className="flex flex-col *:text-sm *:space-y-2 text-left">
+        {/* <nav className="flex flex-col *:text-sm *:space-y-2 text-left">
           <ul className="*:hover:underline">
             <h4 className="underline">Legal</h4>
             <li>
@@ -92,7 +107,7 @@ const Footer = () => {
               <a href=""></a>
             </li>
           </ul>
-        </nav>
+        </nav> */}
 
         {/* Social Icon */}
         <nav className="flex flex-col justify-end gap-6">
@@ -101,20 +116,20 @@ const Footer = () => {
             <li>
               <a
                 className="hover:text-primary"
-                href="https://www.facebook.com/"
+                href="https://github.com/MizanRbf"
               >
-                <FaFacebook />
+                <FaGithub />
               </a>
             </li>
             <li>
-              <a className="hover:text-primary" href="https://x.com/">
+              <a className="hover:text-primary" href="https://x.com/MizanRbf">
                 <FaXTwitter />
               </a>
             </li>
             <li>
               <a
                 className="hover:text-primary"
-                href="https://www.linkedin.com/"
+                href="https://www.linkedin.com/in/mizanrbf/"
               >
                 <FaLinkedin />
               </a>

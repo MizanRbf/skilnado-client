@@ -61,16 +61,18 @@ const Navbar = () => {
                     </button>
                   </Link>
                 </li>
-                <li>
-                  <Link to="/dashboard">
-                    <button
-                      className="w-full text-left cursor-pointer"
-                      onClick={() => setOpen(false)}
-                    >
-                      Dashboard
-                    </button>
-                  </Link>
-                </li>
+                {user && (
+                  <li>
+                    <Link to="/dashboard">
+                      <button
+                        className="w-full text-left cursor-pointer"
+                        onClick={() => setOpen(false)}
+                      >
+                        Dashboard
+                      </button>
+                    </Link>
+                  </li>
+                )}
                 <li>
                   <Link to="/blogs">
                     <button
@@ -115,9 +117,18 @@ const Navbar = () => {
           <li>
             <NavLink to="/browseTasks">Browse All Tasks</NavLink>
           </li>
-          <li>
-            <NavLink to="/dashboard">Dashboard</NavLink>
-          </li>
+          {user && (
+            <li>
+              <Link to="/dashboard">
+                <button
+                  className="w-full text-left cursor-pointer"
+                  onClick={() => setOpen(false)}
+                >
+                  Dashboard
+                </button>
+              </Link>
+            </li>
+          )}
           <li>
             <NavLink to="/blogs">Blogs</NavLink>
           </li>
