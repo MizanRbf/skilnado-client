@@ -55,7 +55,7 @@ const UpdateMyTask = () => {
       <div>
         {/* Content */}
         <div className="text-center">
-          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+          <h1 className="mb-4 py-1 text-white text-center rounded-sm bg-secondary">
             Update Your Data
           </h1>
         </div>
@@ -63,7 +63,7 @@ const UpdateMyTask = () => {
         {/* Form */}
         <form
           onSubmit={handleUpdateMyTask}
-          className="bg-secondary p-4 rounded-lg *:border-0"
+          className="bg-secondary p-4 rounded-lg *:border-0 mb-10"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 *:border-0">
             <fieldset className="fieldset border-base-300 rounded-box w-full border p-4">

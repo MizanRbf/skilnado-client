@@ -17,7 +17,7 @@ const BidsDetails = () => {
   return (
     <div className="pt-30">
       <div>
-        <h1 className=" py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+        <h1 className=" py-1 text-white text-center rounded-sm bg-secondary">
           Bids in Your Tasks
         </h1>
         {bids.length == 0 && (
@@ -27,19 +27,19 @@ const BidsDetails = () => {
             </h1>
           </div>
         )}
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {bids.map((bid) => (
-            <div className="bg-secondary rounded-xl p-4 text-white">
+            <div className="bg- rounded-sm p-4 border border-primary shadow-xl">
               <p>
-                <span>Amount: </span>
+                <span className="font-semibold">Amount: </span>
                 {bid.amount}
               </p>
               <p>
-                <span>Duration: </span>
+                <span className="font-semibold">Duration: </span>
                 {bid.duration}
               </p>
               <p>
-                <span>CoverLetter: </span>
+                <span className="font-semibold">CoverLetter: </span>
                 {bid.coverLetter}
               </p>
             </div>

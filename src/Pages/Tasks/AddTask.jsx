@@ -53,20 +53,23 @@ const AddTask = () => {
         </Helmet>
         {/* Content */}
         <div className="text-center mb-10">
-          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
-            Add Task
+          <h1 className="mb-4 py-1 text-white text-center rounded-sm bg-secondary">
+            Fill up to Add Task
           </h1>
         </div>
 
         {/* Form */}
-        <form onSubmit={handleAddTask} className="bg-secondary p-4 rounded-lg">
+        <form
+          onSubmit={handleAddTask}
+          className="border border-primary p-4 rounded-lg"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2">
-            <fieldset className="fieldset border-base-300 rounded-box w-full p-4">
+            <fieldset className="fieldset border-base-300 rounded-box w-full p-4 ">
               <label className="label text-white">Task Title</label>
               <input
                 type="text"
                 name="taskTitle"
-                className="input w-full"
+                className="input w-full border-secondary"
                 placeholder="Enter Task Name"
               />
             </fieldset>
@@ -75,7 +78,7 @@ const AddTask = () => {
               <select
                 defaultValue="Category"
                 name="category"
-                className="select w-full"
+                className="select w-full border-secondary"
               >
                 <option disabled={true}>Category</option>
                 <option>Web Development</option>
@@ -86,7 +89,11 @@ const AddTask = () => {
             </fieldset>
             <fieldset className="fieldset  border-base-300 rounded-box w-full p-4">
               <label className="label text-white">Deadline</label>
-              <input type="date" name="deadline" className="input w-full" />
+              <input
+                type="date"
+                name="deadline"
+                className="input w-full border-secondary"
+              />
             </fieldset>
             {/* Budget */}
             <fieldset className="fieldset  border-base-300 rounded-box w-full p-4">
@@ -94,7 +101,7 @@ const AddTask = () => {
               <input
                 type="text"
                 name="budget"
-                className="input w-full"
+                className="input w-full border-secondary"
                 placeholder="Enter Task Budget"
               />
             </fieldset>
@@ -103,7 +110,7 @@ const AddTask = () => {
               <input
                 type="email"
                 name="email"
-                className="input w-full"
+                className="input w-full border-secondary"
                 placeholder="Enter Your Email"
                 defaultValue={user?.email}
                 readOnly
@@ -114,7 +121,7 @@ const AddTask = () => {
               <input
                 type="text"
                 name="name"
-                className="input w-full"
+                className="input w-full border-secondary"
                 placeholder="Enter Your Name"
                 defaultValue={user?.displayName}
                 readOnlys
@@ -127,7 +134,7 @@ const AddTask = () => {
             <textarea
               type="text"
               name="description"
-              className="input w-full"
+              className="input w-full border-secondary"
               placeholder="Text Details"
             />
           </fieldset>
@@ -136,7 +143,7 @@ const AddTask = () => {
           <fieldset className="fieldset  rounded-box w-full p-4 ">
             <input
               type="submit"
-              className="input w-full font text-white bg-primary text-xl cursor-pointer"
+              className="input w-full font text-white bg-primary text-xl cursor-pointer "
               value="Add Task"
             />
           </fieldset>
