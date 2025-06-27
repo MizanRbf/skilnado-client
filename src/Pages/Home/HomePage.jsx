@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import Banner from "./Banner";
 import { useLoaderData } from "react-router";
 import FeaturedCard from "./FeaturedCard";
 import EliteFreelancers from "./EliteFreelancers";
@@ -12,7 +11,7 @@ const HomePage = () => {
   const featuredTasks = useLoaderData();
 
   return (
-    <div className="max-w-[1200px] mx-auto">
+    <div className="max-w-[1500px] mx-auto">
       <Helmet>
         <title>Skilnado || Home</title>
       </Helmet>
@@ -28,7 +27,7 @@ const HomePage = () => {
           </h1>
 
           {/* Featured Card */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {featuredTasks.map((featuredTask) => (
               <FeaturedCard
                 key={featuredTask._id}

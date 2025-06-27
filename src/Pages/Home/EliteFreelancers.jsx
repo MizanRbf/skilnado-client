@@ -68,9 +68,10 @@ const EliteFreelancers = () => {
                   ))}
                 </div>
               </div>
-              <button className="bg-primary w-full rounded-b-lg text-white font-bold py-2">
+              {/* Mail Button */}
+              {/* <button className="bg-primary w-full rounded-b-lg text-white font-bold py-2">
                 Send Mail
-              </button>
+              </button> */}
             </div>
           </div>
         </Section>

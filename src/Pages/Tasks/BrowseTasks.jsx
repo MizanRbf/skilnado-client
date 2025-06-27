@@ -12,7 +12,7 @@ const BrowseTasks = () => {
 
   return (
     <div className="pt-40">
-      <div className="max-w-[1200px] mx-auto px- text-black mb-10">
+      <div className="max-w-[1500px] mx-auto px- text-black mb-10">
         <Helmet>
           <title>Skilnado || BrowseTasks</title>
         </Helmet>
@@ -22,7 +22,7 @@ const BrowseTasks = () => {
               All Tasks
             </h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {tasks.map((task) => (
               <TaskCard
                 key={task._id}

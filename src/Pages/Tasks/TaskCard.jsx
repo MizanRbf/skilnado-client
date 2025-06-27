@@ -7,7 +7,7 @@ const TaskCard = ({ task }) => {
 
   return (
     <div className="bg-gray-100 rounded-lg border border-primary">
-      <div className="bg-black text-white text-center py-2">
+      <div className="bg-black text-white text-center py-2 rounded-t-lg">
         <h2>{taskTitle}</h2>
       </div>
       <div className="p-6 space-y-2">
@@ -29,7 +29,7 @@ const TaskCard = ({ task }) => {
       </div>
       {/* Details Button */}
       <Link to={`/browseTasks/${_id}`}>
-        <button className="bg-primary p-2  text-white mt-3 w-full rounded-b-lg font-bold text-xl cursor-pointer">
+        <button className="bg-primary p-2  text-white w-full rounded-b-lg font-bold text-xl cursor-pointer">
           See Details
         </button>
       </Link>

@@ -18,33 +18,35 @@ const FeaturedCard = ({ featuredTask }) => {
   const { _id, taskTitle, category, budget, email, name } = featuredTask;
 
   return (
-    <Section>
-      <div className="bg-gray-100 rounded-lg text-black border border-primary shadow-lg">
-        <Helmet>
-          <title>Skilnado || Featured Task</title>
-        </Helmet>
-        <div className="bg-black text-white text-center rounded-t-lg">
-          <h2 className="py-2">{taskTitle}</h2>
-        </div>
-        <div className="p-6">
-          <p>
-            <span className="font-bold">Name:</span> {name}
-          </p>
-          <p>
-            <span className="font-bold">Category:</span> {category}
-          </p>
-          <p>
-            <span className="font-bold">Email:</span> {email}
-          </p>
-          <p>
-            <span className="font-bold">Budget:</span> {budget}
-          </p>
-          <div className="bg-white rounded-2xl text-center font-bold text-black shadow-xl">
-            <Deadline deadline={featuredTask?.deadline}></Deadline>
+    <Link to={`/browseTasks/${_id}`}>
+      <Section>
+        <div className="bg-gray-100 rounded-lg text-black border border-primary shadow-lg">
+          <Helmet>
+            <title>Skilnado || Featured Task</title>
+          </Helmet>
+          <div className="bg-black text-white text-center rounded-t-lg">
+            <h2 className="py-2">{taskTitle}</h2>
+          </div>
+          <div className="p-6">
+            <p>
+              <span className="font-bold">Name:</span> {name}
+            </p>
+            <p>
+              <span className="font-bold">Category:</span> {category}
+            </p>
+            <p>
+              <span className="font-bold">Email:</span> {email}
+            </p>
+            <p>
+              <span className="font-bold">Budget:</span> {budget}
+            </p>
+            <div className="bg-white rounded-2xl text-center font-bold text-black shadow-xl">
+              <Deadline deadline={featuredTask?.deadline}></Deadline>
+            </div>
           </div>
         </div>
-      </div>
-    </Section>
+      </Section>
+    </Link>
   );
 };
 

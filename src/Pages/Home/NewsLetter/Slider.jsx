@@ -12,38 +12,48 @@ const Slider = () => {
       <Carousel autoPlay={true} infiniteLoop={true} showThumbs={false}>
         {/* Slider-1 */}
         <div className="relative">
-          <img className="h-[450px] " src={bannerImg1} />
-          <div className=" p-5 absolute top-[130px] left-[30px] text-white md:text-left">
-            <h1 className="  md:mb-4 ">Welcome to Skilnado</h1>
-            <p className=" mb-6">Find the perfect freelancer for your needs.</p>
-            <button className="bg-white text-black font-semibold px-5 py-2 rounded-md hover:bg-gray-200">
-              Get Started
-            </button>
+          <img
+            className="h-[229px] md:h-[450px] lg:h-[500px] "
+            src={bannerImg1}
+          />
+
+          <div className="p-5 md:p-8 lg:p-10 absolute top-[70px] md:top-[130px] text-white text-left bg-[#02020285]">
+            <p className="md:mb-4 text-lg md:text-4xl lg:text-5xl font-bold">
+              Welcome to Skilnado
+            </p>
+            <p className=" mb-6 text-xs md:text-lg lg:text-xl">
+              Find the perfect freelancer for your needs.
+            </p>
           </div>
         </div>
         {/* Slider-2 */}
         <div className="relative">
-          <img className="h-[450px] " src={bannerImg2} />
-          <div className=" p-5 absolute top-[130px] left-[30px] text-white md:text-left">
-            <h1 className="  md:mb-4">Post Your Task Easily</h1>
-            <p className=" mb-6">Quick and simple way to get work done.</p>
-            <button className="bg-white text-black font-semibold px-5 py-2 rounded-md hover:bg-gray-200">
-              Post Now
-            </button>
+          <img
+            className="h-[229px] md:h-[450px] lg:h-[500px]"
+            src={bannerImg2}
+          />
+
+          <div className="p-5 md:p-8 lg:p-10 absolute top-[70px] md:top-[130px] text-white text-left bg-[#02020285]">
+            <p className="md:mb-4 text-lg md:text-4xl lg:text-5xl font-bold">
+              Post Your Task Easily
+            </p>
+            <p className=" mb-6 text-xs md:text-lg lg:text-xl">
+              Quick and simple way to get work done
+            </p>
           </div>
         </div>
         {/* Slider-3 */}
         <div className="relative">
-          <div className=" p-5 pl-10 absolute top-[130px] left-[00px] text-white bg-[#4b6d1485] text-left">
-            <h1 className="  mb-4">Build Your Career</h1>
-            <p className=" mb-6">
-              Join our platform and grow your skills with real projects.
+          <div className="p-5 md:p-8 lg:p-10 absolute top-[70px] md:top-[130px] text-white text-left bg-[#02020285]">
+            <p className="md:mb-4 text-lg md:text-4xl lg:text-5xl font-bold">
+              Build Your Career
             </p>
-            <button className="bg-white text-black font-semibold px-5 py-2 rounded-md hover:bg-gray-200">
-              Explore Now
-            </button>
+            <p className=" mb-6 text-xs md:text-lg lg:text-xl">
+              Join our platform and grow your skills
+            </p>
           </div>
-          <img className="h-[450px]" src={bannerImg3} />
+
+          <img className="md:h-[450px] lg:h-[500px]" src={bannerImg3} />
         </div>
       </Carousel>
     </div>
