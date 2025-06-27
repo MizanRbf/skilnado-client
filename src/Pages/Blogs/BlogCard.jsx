@@ -1,16 +1,21 @@
 import React from "react";
 
-const BlogCard = ({ ques }) => {
-  const { id, question, answer } = ques;
+const BlogCard = ({ post }) => {
+  const { image, title, excerpt } = post;
   return (
-    <div className="border border-secondary mb-4 p-4 rounded-lg">
-      <h3>
-        {id}. {question}
-      </h3>
-      <hr className="text-slate-400 border-dashed my-4" />
-      <p>
-        <span className="text-black font-semibold">Answer:</span> {answer}
-      </p>
+    <div className="border border-secondary mb-4 p-4 rounded-lg flex items-center gap-6 flex-col lg:flex-row">
+      <div className="w-full">
+        <img
+          className="lg:min-w-[400px] lg:min-h-[300px] w-full"
+          src={image}
+          alt=""
+        />
+      </div>
+      <div>
+        <h2 className="mb-4">{title}</h2>
+
+        <p className="text-sm lg:text-lg">{excerpt}</p>
+      </div>
     </div>
   );
 };

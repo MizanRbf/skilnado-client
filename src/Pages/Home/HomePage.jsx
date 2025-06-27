@@ -64,7 +64,7 @@ const HomePage = () => {
       <div className="mt-30 mb-20">
         <div className=" mb-6">
           <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
-            NewsLetter
+            Stay Updated
           </h1>
 
           <NewsLetter></NewsLetter>

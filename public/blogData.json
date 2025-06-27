@@ -1,27 +1,37 @@
 [
   {
     "id": 1,
-    "question": "What is useState and how does it work in React?",
-    "answer": "useState is a function that lets you store and manage values within a React functional component. It gives you a variable to hold your data and another function to update that value, triggering the component to refresh with the new data."
+    "title": "Top 10 Freelancing Skills in 2025",
+    "excerpt": "As the freelancing industry continues to evolve, it's important to stay ahead by mastering high-demand skills. In 2025, skills like AI integration, web development, UX design, copywriting, digital marketing, and cybersecurity are expected to dominate client demand. Learning and refining these skills will give freelancers a competitive edge, helping them secure better-paying projects and long-term client relationships. This blog explores the top 10 freelance skills you should focus on, with practical tips and tools to help you level up. Whether you're just starting or already freelancing, this list will help guide your professional growth and income potential in 2025.",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=400&q=80",
+    "link": "/blog/top-freelancing-skills-2025"
   },
   {
     "id": 2,
-    "question": "What is the purpose of useEffect in React?",
-    "answer": "useEffect allows you to run certain pieces of code after your component has rendered. It's often used for things like fetching data from an API, adding event listeners, or doing clean-up work when the component unmounts."
+    "title": "How to Write Winning Bids on Projects",
+    "excerpt": "Bidding is an essential part of freelancing success. A well-crafted proposal can mean the difference between landing a project or being ignored. This blog covers proven strategies for writing winning bids that grab clients’ attention. From writing strong introductions to highlighting relevant skills and presenting a clear value proposition, we’ll guide you through every step. Learn how to personalize your bids, avoid common mistakes, and showcase your credibility. By the end of this post, you’ll be equipped with the tools to write compelling proposals that increase your chances of winning more projects and building long-term client trust.",
+    "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=400&q=80",
+    "link": "/blog/winning-bid-strategies"
   },
   {
     "id": 3,
-    "question": "What is a custom hook in React and when should you use one?",
-    "answer": "A custom hook is basically a way to extract and reuse logic that involves hooks like useState or useEffect. If you find yourself repeating the same code in multiple components, it's a good idea to wrap that logic inside a custom hook to keep your code clean and organized."
+    "title": "Why Clients Choose Verified Freelancers",
+    "excerpt": "Trust plays a major role in a client’s decision-making process. Verified freelancers—those with completed profiles, ID verification, and positive reviews—are often preferred for projects. This blog explains why verification builds credibility and how it sets professionals apart from others in the marketplace. Clients are more likely to award tasks to freelancers who appear authentic, reliable, and committed. We’ll also show you simple steps to become a verified freelancer and highlight the long-term benefits, including better visibility and higher-paying opportunities. Being verified is no longer optional—it’s a strategic move to earn trust and scale your freelance career.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80",
+    "link": "/blog/verified-freelancer-benefits"
   },
   {
     "id": 4,
-    "question": "Difference between controlled and uncontrolled components. Which one is better?",
-    "answer": "Controlled components handle their input values using React state, so everything is kept in sync. Uncontrolled components, on the other hand, rely on the browser's default behavior and use refs to access values. Controlled components are usually preferred for better control and validation."
+    "title": "Effective Communication for Freelancers",
+    "excerpt": "Clear communication is the foundation of successful freelancing. Whether it’s understanding client expectations, setting project timelines, or handling feedback, how you communicate can define the outcome of your work. In this blog, we’ll share essential communication tips tailored for freelancers. Learn how to write professional messages, ask clarifying questions, and set proper boundaries. We’ll also discuss tools that improve collaboration, like email templates, messaging apps, and video calls. Effective communication builds trust, reduces revisions, and leads to repeat work. Mastering it will not only help you grow your freelance business but also establish long-term relationships with satisfied clients.",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=400&q=80",
+    "link": "/blog/effective-communication-freelancers"
   },
   {
     "id": 5,
-    "question": "Tell us something about useFormStatus() in React.",
-    "answer": "useFormStatus is a hook that helps track the current state of a form, like whether it's being submitted or not. It's particularly useful in React frameworks like Next.js where form handling can involve server-side logic."
+    "title": "Managing Deadlines: A Freelancer's Guide",
+    "excerpt": "Meeting deadlines consistently is what separates successful freelancers from the rest. Clients value punctuality and reliability just as much as skill. In this guide, we explore how to manage your time effectively, break large tasks into milestones, and use tools like calendars and task trackers. You’ll also learn strategies to handle overlapping projects and avoid last-minute rushes. Being proactive in communication when delays happen and building in buffer time can greatly improve your delivery record. These techniques will help you not only meet client expectations but also reduce stress and increase productivity in your freelance workflow.",
+    "image": "https://images.unsplash.com/photo-1508830524289-0adcbe822b40?auto=format&fit=crop&w=400&q=80",
+    "link": "/blog/managing-deadlines-freelancer"
   }
 ]
