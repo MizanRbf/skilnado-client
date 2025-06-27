@@ -21,9 +21,9 @@ const HomePage = () => {
         <Slider></Slider>
       </div>
       {/* Featured Tasks Section */}
-      <div className="mt-20">
+      <div className="mt-30">
         <div>
-          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+          <h1 className="mb-4 py-1 text-white  bg-secondary inline-block px-6 rounded-r-full">
             Featured Tasks
           </h1>
 
@@ -41,8 +41,8 @@ const HomePage = () => {
 
       {/* Elite Freelancers */}
       <div className="mt-30">
-        <div className="mb-6">
-          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+        <div>
+          <h1 className="mb-4 py-1 text-white inline-block px-6 rounded-r-full bg-secondary">
             Elite Freelancers
           </h1>
         </div>
@@ -50,9 +50,9 @@ const HomePage = () => {
       </div>
 
       {/* Testimonials */}
-      <div className="mt-30 mb-20">
-        <div className=" mb-6">
-          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+      <div className="mt-30">
+        <div>
+          <h1 className="mb-4 py-1 text-white inline-block px-6 rounded-r-full bg-secondary">
             Testimonials
           </h1>
 
@@ -62,8 +62,8 @@ const HomePage = () => {
 
       {/* NewsLetter */}
       <div className="mt-30 mb-20">
-        <div className=" mb-6">
-          <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+        <div>
+          <h1 className="mb-4 py-1 text-white inline-block px-6 rounded-r-full bg-secondary">
             Stay Updated
           </h1>
 

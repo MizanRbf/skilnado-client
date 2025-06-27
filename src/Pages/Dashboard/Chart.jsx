@@ -6,6 +6,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  ResponsiveContainer,
 } from "recharts";
 
 const Chart = ({ myTasks }) => {
@@ -30,37 +31,39 @@ const Chart = ({ myTasks }) => {
 
   return (
     <div
-      className={`border border-slate-200 rounded-lg mx-4 flex justify-center mb-20 mt-30 lg:mt-10 ${
+      className={`border border-slate-200 rounded-lg mx-4 flex justify-center mb-20 mt-30 shadow-lg lg:mt-10 bg-white ${
         myTasks?.length == "0" ? "hidden" : "block"
       }`}
     >
-      <BarChart
-        width={1000}
-        height={300}
-        data={myTasks}
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray="3,3" />
-        <XAxis dataKey="category" />
-        <YAxis />
-        <Tooltip />
-
-        <Bar
-          dataKey="budget"
-          fill="#8884d8"
-          shape={<TriangleBar />}
-          label={{ position: "top" }}
+      <ResponsiveContainer width="100%" height={300}>
+        <BarChart
+          width={1000}
+          height={300}
+          data={myTasks}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
         >
-          {myTasks.map((entry, index) => (
-            <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-          ))}
-        </Bar>
-      </BarChart>
+          <CartesianGrid strokeDasharray="3,3" />
+          <XAxis dataKey="category" />
+          <YAxis />
+          <Tooltip />
+
+          <Bar
+            dataKey="budget"
+            fill="#8884d8"
+            shape={<TriangleBar />}
+            label={{ position: "top" }}
+          >
+            {myTasks.map((entry, index) => (
+              <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+            ))}
+          </Bar>
+        </BarChart>
+      </ResponsiveContainer>
     </div>
   );
 };

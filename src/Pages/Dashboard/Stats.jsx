@@ -19,32 +19,32 @@ const Stats = ({ myTasks, bids, allTasks }) => {
       <div className="p-6 mt-10">
         <div className="p-4 grid justify-center grid-cols-2 text-center lg:grid-cols-4">
           {/* All tasks */}
-          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4">
-            <p className="text-4xl font-bold leading-none lg:text-6xl">
+          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4 bg-white">
+            <p className="text-4xl font-bold leading-none ">
               <CountUp end={allTasks.length} duration={20} />+
             </p>
             <p className="text-sm sm:text-base">All tasks</p>
           </div>
 
           {/* My Posted Tasks */}
-          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4">
-            <p className="text-4xl font-bold leading-none lg:text-6xl">
+          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4 bg-white">
+            <p className="text-4xl font-bold leading-none ">
               <CountUp end={myTasks.length} duration={20} />+
             </p>
             <p className="text-sm sm:text-base">My Posted Tasks</p>
           </div>
 
           {/* Total Bids */}
-          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4">
-            <p className="text-4xl font-bold leading-none lg:text-6xl">
+          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4 bg-white">
+            <p className="text-4xl font-bold leading-none ">
               <CountUp end={bids.length} duration={20} />+
             </p>
             <p className="text-sm sm:text-base">Total Bids</p>
           </div>
 
           {/* Total Users */}
-          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4">
-            <p className="text-4xl font-bold leading-none lg:text-6xl">
+          <div className="flex flex-col justify-start m-2 lg:m-6 shadow-lg rounded-sm px-10 py-4 bg-white">
+            <p className="text-4xl font-bold leading-none ">
               <CountUp end="44" duration={20} />+
             </p>
             <p className="text-sm sm:text-base">Total Users</p>

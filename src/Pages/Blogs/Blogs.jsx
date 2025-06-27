@@ -9,7 +9,7 @@ const Blogs = () => {
     <div className="px-4 max-w-[1400px] mx-auto">
       <div className="text-center mb-6 md:mt-10 mt-10">
         <h1 className="text-2xl md:text-4xl font-bold mb-4">📚 Blogs</h1>
-        <p className="bg-secondary text-white rounded-sm text-xs md:text-sm inline-block px-4">
+        <p className="border border-primary text-black bg-gray-100 shadow-lg rounded-sm text-xs md:text-sm inline-block px-4">
           Read expert tips and guides to boost your freelancing career and hire
           smarter. <br className="hidden md:block" /> Stay updated with our
           latest blog posts.
@@ -20,7 +20,7 @@ const Blogs = () => {
           <BlogCard key={post.id} post={post}></BlogCard>
         ))}
         <Link to="/">
-          <button className="bg-secondary text-white px-4 rounded-sm flex items-center gap-2">
+          <button className="bg-secondary text-white px-4 rounded-sm flex items-center gap-2 cursor-pointer">
             <IoReturnDownBack size={20} />
             Back Home
           </button>

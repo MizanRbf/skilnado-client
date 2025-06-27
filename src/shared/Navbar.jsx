@@ -39,48 +39,50 @@ const Navbar = () => {
                 : "opacity-0 -translate-y-5 invisible"
             }`}
           >
-            <ul className="px-10 *:hover:bg-white *:hover:text-black  *:hover:duration-300 space-y-2">
-              <li>
-                <Link to="/">
-                  <button
-                    className="w-full text-left cursor-pointer"
-                    onClick={() => setOpen(false)}
-                  >
-                    Home
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link to="/browseAllTasks">
-                  <button
-                    className="w-full text-left cursor-pointer"
-                    onClick={() => setOpen(false)}
-                  >
-                    Browse All Tasks
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link to="/dashboard">
-                  <button
-                    className="w-full text-left cursor-pointer"
-                    onClick={() => setOpen(false)}
-                  >
-                    Dashboard
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link to="/blogs">
-                  <button
-                    className="w-full text-left cursor-pointer"
-                    onClick={() => setOpen(false)}
-                  >
-                    Blogs
-                  </button>
-                </Link>
-              </li>
-            </ul>
+            <div>
+              <ul className="px-10 *:hover:bg-white *:hover:text-black  *:hover:duration-300 space-y-2">
+                <li>
+                  <Link to="/">
+                    <button
+                      className="w-full text-left cursor-pointer"
+                      onClick={() => setOpen(false)}
+                    >
+                      Home
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/browseAllTasks">
+                    <button
+                      className="w-full text-left cursor-pointer"
+                      onClick={() => setOpen(false)}
+                    >
+                      Browse All Tasks
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/dashboard">
+                    <button
+                      className="w-full text-left cursor-pointer"
+                      onClick={() => setOpen(false)}
+                    >
+                      Dashboard
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/blogs">
+                    <button
+                      className="w-full text-left cursor-pointer"
+                      onClick={() => setOpen(false)}
+                    >
+                      Blogs
+                    </button>
+                  </Link>
+                </li>
+              </ul>
+            </div>
             {/* Login Button */}
 
             <div className="px-10">

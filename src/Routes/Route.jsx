@@ -91,7 +91,11 @@ export const router = createBrowserRouter([
     path: "/dashboard",
     loader: () => fetch("https://skilnado-server.vercel.app/tasks"),
     hydrateFallbackElement: <Loader></Loader>,
-    element: <Dashboard></Dashboard>,
+    element: (
+      <PrivateRoute>
+        <Dashboard></Dashboard>
+      </PrivateRoute>
+    ),
   },
   // AuthLayout
   {

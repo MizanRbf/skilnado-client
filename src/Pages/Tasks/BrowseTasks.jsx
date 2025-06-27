@@ -17,8 +17,8 @@ const BrowseTasks = () => {
           <title>Skilnado || BrowseTasks</title>
         </Helmet>
         <div className="">
-          <div className="text-center">
-            <h1 className="mb-4 py-1 text-white text-center rounded-tr-4xl rounded-tl-4xl rounded-bl-sm rounded-br-sm bg-secondary">
+          <div className="">
+            <h1 className="mb-4 px-40 rounded-r-full py-1 text-white text-center inline-block bg-secondary">
               All Tasks
             </h1>
           </div>
